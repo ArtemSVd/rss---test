@@ -10,32 +10,46 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 
 import java.net.URL;
-
+import java.util.HashSet;
+import java.util.Set;
 
 
 public class Main {
-    public static void main(String[] args) throws IOException, XMLStreamException {
-        URL url = new URL("https://news.yandex.ru/games.rss");
+    public Set<News> getNews() throws IOException, XMLStreamException {
+        Set<News> newsList = new HashSet<>();
+
+        URL url = new URL("https://news.yandex.ru/sport.rss");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
-        // First create a new XMLInputFactory
         XMLInputFactory inputFactory = XMLInputFactory.newInstance();
 
-        // Setup a new eventReader
         InputStream in = url.openStream();
         XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
-        // read the XML document
+        News news = null;
         while (eventReader.hasNext()) {
             XMLEvent event = eventReader.nextEvent();
             if (event.isStartElement()) {
                 String localPart = event.asStartElement().getName().getLocalPart();
-                if(localPart.equals("title")) {
-                    String title = getCharacterData(event, eventReader);
-                    System.out.println(title);
+                if (news != null) {
+                    if (localPart.equals("title")) {
+                        news.setTitle(getCharacterData(event, eventReader));
+                    }
+                    if (localPart.equals("link")) {
+                        news.setLink(getCharacterData(event, eventReader));
+                    }
+                    if (localPart.equals("pubDate")) {
+                        news.setPubDate(getCharacterData(event, eventReader));
+                    }
+                    if (news.isNewsReady()) {
+                        newsList.add(news);
+                    }
+                }
+                if (localPart.equals("item")) {
+                   news = new News();
                 }
             }
-
             }
+        return  newsList;
     }
     private static String getCharacterData(XMLEvent event, XMLEventReader eventReader)
             throws XMLStreamException {
