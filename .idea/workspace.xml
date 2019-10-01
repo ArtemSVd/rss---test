@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5f344de-ee60-4a03-bc26-adfc4f4ea93b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/Gui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/News.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Themes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_11_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_11_0.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rss-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rss-test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Gui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/News.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +32,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mechatronics" />
+    <property name="last_opened_file_path" value="$PATH_TO_FX$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -78,9 +76,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Themes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.Themes" />
+      <module name="rss-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Gui" />
+        <item itemvalue="Application.Themes" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -96,6 +108,7 @@
       <option name="presentableId" value="Default" />
       <updated>1569937531507</updated>
       <workItem from="1569937535858" duration="5230000" />
+      <workItem from="1569946195851" duration="5259000" />
     </task>
     <servers />
   </component>
@@ -107,10 +120,23 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/Main.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

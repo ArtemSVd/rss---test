@@ -5,20 +5,28 @@ import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.Characters;
 import javax.xml.stream.events.XMLEvent;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
 
 import java.net.URL;
-import java.util.HashSet;
-import java.util.Set;
+import java.text.ParseException;
+import java.util.*;
 
 
 public class Main {
-    public Set<News> getNews() throws IOException, XMLStreamException {
-        Set<News> newsList = new HashSet<>();
+    TreeSet<News> newsList = new TreeSet<>();
+    public Set<News> getNews() throws IOException, ClassNotFoundException, XMLStreamException, ParseException {
+        ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(new File("newsLink")));
+        Map<String,URL> newsMap = (HashMap) objectInputStream.readObject();
 
-        URL url = new URL("https://news.yandex.ru/sport.rss");
+        getNewsFromThemes(newsMap.get("army"));
+        getNewsFromThemes(newsMap.get("health"));
+        getNewsFromThemes(newsMap.get("communal"));
+
+        return newsList;
+    }
+    public Set<News> getNewsFromThemes(URL url) throws IOException, XMLStreamException, ParseException {
+        //URL url = new URL("https://news.yandex.ru/football.rss");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
         XMLInputFactory inputFactory = XMLInputFactory.newInstance();
