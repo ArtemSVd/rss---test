@@ -10,7 +10,7 @@
         <property name="hibernate.connection.url">jdbc:h2:~/test</property>
         <property name="hibernate.connection.username">sa</property>
         <!-- JDBC connection pool (use the built-in) -->
-        <property name="hibernate.connection.pool_size">1</property>
+        <property name="hibernate.connection.pool_size">2</property>
         <!-- Echo all executed SQL to stdout -->
         <property name="show_sql">true</property>
         <!-- SQL dialect -->
@@ -20,7 +20,10 @@
         <property name="hibernate.connection.characterEncoding">utf8</property>
         <property name="hibernate.connection.useUnicode">true</property>
 
-        <mapping class="gui.qwerty.RssLink" />
+        <property name="hibernate.hbm2ddl.auto">create</property>
+
+        <mapping class="gui.entity.Category" />
+        <mapping class="gui.entity.News"/>
 
     </session-factory>
 </hibernate-configuration>
