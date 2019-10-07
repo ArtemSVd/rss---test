@@ -2,29 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5f344de-ee60-4a03-bc26-adfc4f4ea93b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rss-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rss-test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/dao/RssLinkDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/dao/RssLinkDaoImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/model/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/entity/News.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/model/RssLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/qwerty/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/qwerty/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/qwerty/Gui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/qwerty/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gui/qwerty/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/test/RssLinkTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/tools/org/h2/build/doc/dictionary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/tools/org/h2/build/doc/dictionary.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/dao/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/dao/CategoryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/dao/NewsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/NewsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/dao/NewsDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/NewsDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/entity/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/News.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/qwerty/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/qwerty/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/qwerty/Themes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gui/utils/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/HibernateUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/rsslink.hbm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/dao/RssLinkDao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/dao/RssLinkDaoImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/model/News.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/qwerty/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/qwerty/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/qwerty/Gui$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/qwerty/Gui.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/qwerty/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/gui/qwerty/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/qwerty/RssLink.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/test/RssLinkTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/dao/CategoryDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/dao/CategoryDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/dao/NewsDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/dao/NewsDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/entity/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/entity/News.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/qwerty/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/qwerty/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/qwerty/Themes.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/gui/utils/HibernateUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/rsslink.hbm.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,13 +60,6 @@
         <item name="test" type="feb32156:DbDataSourceImpl" />
         <item name="TEST: database" type="2aa06773:H2ImplModel$Database" />
         <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test" type="feb32156:DbDataSourceImpl" />
-        <item name="TEST: database" type="2aa06773:H2ImplModel$Database" />
-        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
-        <item name="CATEGORY: table" type="818c1b4a:H2ImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -106,7 +101,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/java/javafx-sdk-11.0.2/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -134,7 +129,7 @@
   </component>
   <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.qwerty.App" />
+      <option name="MAIN_CLASS_NAME" value="com.App" />
       <module name="rss-test" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -208,12 +203,17 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@15dfdb43" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@13ad0423" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@15dfdb43" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@6e6f6dfa" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@13ad0423" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@c95469" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@13ad0423" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@10d7553" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -236,6 +236,8 @@
       <workItem from="1569953291678" duration="16956000" />
       <workItem from="1570198728267" duration="214000" />
       <workItem from="1570199095331" duration="28155000" />
+      <workItem from="1570375525742" duration="20198000" />
+      <workItem from="1570433898930" duration="14294000" />
     </task>
     <servers />
   </component>
@@ -259,8 +261,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/gui/qwerty/Main.java</url>
-          <line>62</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/qwerty/Main.java</url>
+          <line>61</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>

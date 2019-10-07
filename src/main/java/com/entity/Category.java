@@ -1,12 +1,6 @@
-package gui.entity;
+package com.entity;
 
 import  javax.persistence.*;
-import java.util.ArrayList;
-
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-
 
 @Entity
 @Table(name = "category")
@@ -15,14 +9,11 @@ public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "category_id",unique = true, nullable = false)
-    private int categoryId = 1;
+    private int categoryId;
     @Column(name = "topic")
     private String topic;
     @Column(name = "url")
     private String url;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "news_id")
-    private Set<News> news = new HashSet<>();
 
     public Category(String topic, String url) {
         this.topic = topic;
@@ -56,12 +47,13 @@ public class Category {
         this.url = url;
     }
 
-    public Set<News> getNews() {
-        return news;
-    }
-
-    public void setNews(Set<News> news) {
-        this.news = news;
+    @Override
+    public String toString() {
+        return "Category{" +
+                "categoryId=" + categoryId +
+                ", topic='" + topic + '\'' +
+                ", url='" + url + '\'' +
+                '}';
     }
 }
 

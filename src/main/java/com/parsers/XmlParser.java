@@ -1,25 +1,20 @@
-package gui.qwerty;
+package com.parsers;
 
-import gui.entity.Category;
-import gui.entity.News;
-import javafx.event.Event;
-
+import com.entity.Category;
+import com.entity.News;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.events.Characters;
 import javax.xml.stream.events.XMLEvent;
-import java.io.*;
-
-
-
+import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
-
 import java.text.ParseException;
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
-
-public class Main {
+public class XmlParser {
     private final String TITLE = "title";
     private final String LINK = "link";
     private final String PUB_DATE = "pubDate";
@@ -34,21 +29,18 @@ public class Main {
         InputStream in = url.openStream();
         XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
 
-        String localPart = null;
+        String localPart = "";
         XMLEvent event;
 
         while (!ITEM.equals(localPart) && eventReader.hasNext() ) {
-
-                event = eventReader.nextEvent();
-                localPart = event.isStartElement() ? event.asStartElement().getName().getLocalPart() : null;
-            }
+            event = eventReader.nextEvent();
+            localPart = event.isStartElement() ? event.asStartElement().getName().getLocalPart() : null;
+        }
 
         News news = new News();
-
         while (eventReader.hasNext()) {
             news.setCategory(category);
             event = eventReader.nextEvent();
-
             if (event.isStartElement()) {
                 localPart = event.asStartElement().getName().getLocalPart();
 
@@ -60,16 +52,16 @@ public class Main {
                         news.setUrl(getCharacterData(event, eventReader));
                         break;
                     case PUB_DATE:
-                        news.setPubDateFromXml(getCharacterData(event, eventReader));
+                        news.setDateFromXml(getCharacterData(event, eventReader));
                         break;
                     case ITEM:
                         news = new News();
                         break;
                 }
             }
-        if (news.isReady())
-            set.add(news);
-    }
+            if (news.isReady())
+                set.add(news);
+        }
         return  set;
     }
     private static String getCharacterData(XMLEvent event, XMLEventReader eventReader)

@@ -12,7 +12,9 @@
         <!-- JDBC connection pool (use the built-in) -->
         <property name="hibernate.connection.pool_size">2</property>
         <!-- Echo all executed SQL to stdout -->
-        <property name="show_sql">true</property>
+        <property name="show_sql">false</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.generate_statistics">false</property>
         <!-- SQL dialect -->
         <property name="dialect">org.hibernate.dialect.H2Dialect</property>
         <property name="hibernate.current_session_context_class">thread</property>
@@ -20,10 +22,13 @@
         <property name="hibernate.connection.characterEncoding">utf8</property>
         <property name="hibernate.connection.useUnicode">true</property>
 
-        <property name="hibernate.hbm2ddl.auto">create</property>
+        <property name="hibernate.order_inserts">true</property>
+        <property name="hibernate.order_updates">true</property>
 
-        <mapping class="gui.entity.Category" />
-        <mapping class="gui.entity.News"/>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="com.entity.Category" />
+        <mapping class="com.entity.News"/>
 
     </session-factory>
 </hibernate-configuration>

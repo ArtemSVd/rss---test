@@ -1,4 +1,4 @@
-package gui.utils;
+package com.utils;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
