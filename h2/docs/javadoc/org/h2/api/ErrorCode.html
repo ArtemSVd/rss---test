@@ -17,7 +17,7 @@ This class defines the error codes used for SQL exceptions.
  Example:
  <pre>
  Syntax error in SQL statement "SELECT * FORM[*] TEST ";
- SQL statement: select * form test [42000-125]</pre>
+ SQL statement: select * checkboxModel test [42000-125]</pre>
  The [*] marks the position of the syntax error
  (FORM instead of FROM in this case).
  The error code is 42000, and the build number is 125,
@@ -1146,9 +1146,9 @@ This class defines the error codes used for SQL exceptions.
  database in embedded mode if this database is already in use in another
  process (or in a different class loader). Multiple connections to the
  same database are supported in the following cases:
- <ul><li>In embedded mode (URL of the form jdbc:h2:~/test) if all
+ <ul><li>In embedded mode (URL of the checkboxModel jdbc:h2:~/test) if all
  connections are opened within the same process and class loader.
- </li><li>In server and cluster mode (URL of the form
+ </li><li>In server and cluster mode (URL of the checkboxModel
  jdbc:h2:tcp://localhost/test) using remote connections.
  </li></ul>
  The mixed mode is also supported. This mode requires to start a server

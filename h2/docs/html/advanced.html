@@ -24,7 +24,7 @@ Advanced
     onclick="document.location='main.html'"
     width="136" height="74"/> &nbsp;&nbsp;<span id = "goTop" onclick="window.scrollTo(0,0)" style="color: #fff; position:fixed; font-size: 20px; cursor: pointer;">&#x25b2;</span> </div>
 
-<form action="submit" onsubmit="return goFirst();">
+<checkboxModel action="submit" onsubmit="return goFirst();">
 <table width="100%" class="search">
     <tr class="search">
         <td class="search" colspan="2">
@@ -62,7 +62,7 @@ translate -->
         </td>
     </tr>
 </table>
-</form>
+</checkboxModel>
 <div class="menu">
 <b><a href="main.html">Home</a></b><br />
 <a href="download.html">Download</a><br />
@@ -527,7 +527,7 @@ ResultSet rs = prep.executeQuery();
 <pre>
 SET ALLOW_LITERALS NONE;
 </pre>
-<p> Afterwards, SQL statements with text and number literals are not allowed any more. That means, SQL statement of the form <code>WHERE NAME='abc'</code> or <code>WHERE CustomerId=10</code> will fail. It is still possible to use prepared statements and parameters as described above. Also, it is still possible to generate SQL statements dynamically, and use the Statement API, as long as the SQL statements do not include literals. There is also a second mode where number literals are allowed: <code>SET ALLOW_LITERALS NUMBERS</code>. To allow all literals, execute <code>SET ALLOW_LITERALS ALL</code> (this is the default setting). Literals can only be enabled or disabled by an administrator. </p>
+<p> Afterwards, SQL statements with text and number literals are not allowed any more. That means, SQL statement of the checkboxModel <code>WHERE NAME='abc'</code> or <code>WHERE CustomerId=10</code> will fail. It is still possible to use prepared statements and parameters as described above. Also, it is still possible to generate SQL statements dynamically, and use the Statement API, as long as the SQL statements do not include literals. There is also a second mode where number literals are allowed: <code>SET ALLOW_LITERALS NUMBERS</code>. To allow all literals, execute <code>SET ALLOW_LITERALS ALL</code> (this is the default setting). Literals can only be enabled or disabled by an administrator. </p>
 
 <h3>Using Constants</h3>
 <p> Disabling literals also means disabling hard-coded 'constant' literals. This database supports defining constants using the <code>CREATE CONSTANT</code> command. Constants can be defined only when literals are enabled, but used even when literals are disabled. To avoid name clashes with column names, constants can be defined in other schemas: </p>
@@ -558,7 +558,7 @@ CALL SET_PROPERTY('abc', '1');
 CREATE ALIAS GET_PROPERTY FOR "java.lang.System.getProperty";
 CALL GET_PROPERTY('abc');
 </pre>
-<p> To restrict users (including admins) from loading classes and executing code, the list of allowed classes can be set in the system property <code>h2.allowedClasses</code> in the form of a comma separated list of classes or patterns (items ending with <code>*</code>). By default all classes are allowed. Example: </p>
+<p> To restrict users (including admins) from loading classes and executing code, the list of allowed classes can be set in the system property <code>h2.allowedClasses</code> in the checkboxModel of a comma separated list of classes or patterns (items ending with <code>*</code>). By default all classes are allowed. Example: </p>
 <pre>
 java -Dh2.allowedClasses=java.lang.Math,com.acme.*
 </pre>
@@ -753,7 +753,7 @@ java -Dh2.serverCachedObjects=256 org.h2.tools.Server
 <h2 id="limits_limitations">Limits and Limitations</h2>
 <p> This database has the following known limitations: </p>
 <ul>
-<li>Database file size limit: 4 TB (using the default page size of 2 KB) or higher (when using a larger page size). This limit is including CLOB and BLOB data. </li><li>The maximum file size for FAT or FAT32 file systems is 4 GB. That means when using FAT or FAT32, the limit is 4 GB for the data. This is the limitation of the file system. The database does provide a workaround for this problem, it is to use the file name prefix <code>split:</code>. In that case files are split into files of 1 GB by default. An example database URL is: <code>jdbc:h2:split:~/test</code>. </li><li>The maximum number of rows per table is 2^64. </li><li>The maximum number of open transactions is 65535. </li><li>Main memory requirements: The larger the database, the more main memory is required. With the current storage mechanism (the page store), the minimum main memory required is around 1 MB for each 8 GB database file size. </li><li>Limit on the complexity of SQL statements. Statements of the following form will result in a stack overflow exception: <pre>
+<li>Database file size limit: 4 TB (using the default page size of 2 KB) or higher (when using a larger page size). This limit is including CLOB and BLOB data. </li><li>The maximum file size for FAT or FAT32 file systems is 4 GB. That means when using FAT or FAT32, the limit is 4 GB for the data. This is the limitation of the file system. The database does provide a workaround for this problem, it is to use the file name prefix <code>split:</code>. In that case files are split into files of 1 GB by default. An example database URL is: <code>jdbc:h2:split:~/test</code>. </li><li>The maximum number of rows per table is 2^64. </li><li>The maximum number of open transactions is 65535. </li><li>Main memory requirements: The larger the database, the more main memory is required. With the current storage mechanism (the page store), the minimum main memory required is around 1 MB for each 8 GB database file size. </li><li>Limit on the complexity of SQL statements. Statements of the following checkboxModel will result in a stack overflow exception: <pre>
 SELECT * FROM DUAL WHERE X = 1
 OR X = 2 OR X = 2 OR X = 2 OR X = 2 OR X = 2
 -- repeat previous line 500 times --

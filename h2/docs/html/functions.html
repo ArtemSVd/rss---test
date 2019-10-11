@@ -23,7 +23,7 @@ Functions
     onclick="document.location='main.html'"
     width="136" height="74"/> &nbsp;&nbsp;<span id = "goTop" onclick="window.scrollTo(0,0)" style="color: #fff; position:fixed; font-size: 20px; cursor: pointer;">&#x25b2;</span> </div>
 
-<form action="submit" onsubmit="return goFirst();">
+<checkboxModel action="submit" onsubmit="return goFirst();">
 <table width="100%" class="search">
     <tr class="search">
         <td class="search" colspan="2">
@@ -61,7 +61,7 @@ translate -->
         </td>
     </tr>
 </table>
-</form>
+</checkboxModel>
 <div class="menu">
 <b><a href="main.html">Home</a></b><br />
 <a href="download.html">Download</a><br />
@@ -2520,7 +2520,7 @@ XMLATTR(<a href="grammar.html#string">nameString</a>, <a href="grammar.html#stri
 XMLATTR(<a href="grammar.html#string">nameString</a>, <a href="grammar.html#string">valueString</a>)
 </pre>
 syntax-end -->
-<p>Creates an XML attribute element of the form <code>name=value</code>. The value is encoded as XML text. This method returns a string.</p>
+<p>Creates an XML attribute element of the checkboxModel <code>name=value</code>. The value is encoded as XML text. This method returns a string.</p>
 <p>Example:</p>
 <p class="notranslate">CALL XMLNODE(&#39;a&#39;, XMLATTR(&#39;href&#39;, &#39;http://h2database.com&#39;))</p>
 
@@ -3538,7 +3538,7 @@ LINK_SCHEMA(<a href="grammar.html#string">targetSchemaString</a>, <a href="gramm
 <a href="grammar.html#string">userString</a>, <a href="grammar.html#string">passwordString</a>, <a href="grammar.html#string">sourceSchemaString</a>)
 </pre>
 syntax-end -->
-<p>Creates table links for all tables in a schema. If tables with the same name already exist, they are dropped first. The target schema is created automatically if it does not yet exist. The driver name may be empty if the driver is already loaded. The list of tables linked is returned in the form of a result set. Admin rights are required to execute this command.</p>
+<p>Creates table links for all tables in a schema. If tables with the same name already exist, they are dropped first. The target schema is created automatically if it does not yet exist. The driver name may be empty if the driver is already loaded. The list of tables linked is returned in the checkboxModel of a result set. Admin rights are required to execute this command.</p>
 <p>Example:</p>
 <p class="notranslate">CALL LINK_SCHEMA(&#39;TEST2&#39;, &#39;&#39;, &#39;jdbc:h2:test2&#39;, &#39;sa&#39;, &#39;sa&#39;, &#39;PUBLIC&#39;);</p>
 
@@ -3772,7 +3772,7 @@ TRANSACTION_ID()
 TRANSACTION_ID()
 </pre>
 syntax-end -->
-<p>Returns the current transaction id for this session. This method returns <code>NULL</code> if there is no uncommitted change, or if the the database is not persisted. Otherwise a value of the following form is returned: <code>logFileId-position-sessionId</code>. This method returns a string. The value is unique across database restarts (values are not re-used).</p>
+<p>Returns the current transaction id for this session. This method returns <code>NULL</code> if there is no uncommitted change, or if the the database is not persisted. Otherwise a value of the following checkboxModel is returned: <code>logFileId-position-sessionId</code>. This method returns a string. The value is unique across database restarts (values are not re-used).</p>
 <p>Example:</p>
 <p class="notranslate">CALL TRANSACTION_ID()</p>
 

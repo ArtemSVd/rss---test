@@ -24,7 +24,7 @@ Tutorial
     onclick="document.location='main.html'"
     width="136" height="74"/> &nbsp;&nbsp;<span id = "goTop" onclick="window.scrollTo(0,0)" style="color: #fff; position:fixed; font-size: 20px; cursor: pointer;">&#x25b2;</span> </div>
 
-<form action="submit" onsubmit="return goFirst();">
+<checkboxModel action="submit" onsubmit="return goFirst();">
 <table width="100%" class="search">
     <tr class="search">
         <td class="search" colspan="2">
@@ -62,7 +62,7 @@ translate -->
         </td>
     </tr>
 </table>
-</form>
+</checkboxModel>
 <div class="menu">
 <b><a href="main.html">Home</a></b><br />
 <a href="download.html">Download</a><br />
@@ -288,7 +288,7 @@ java -version
 <h2 id="console_settings">Settings of the H2 Console</h2>
 <p> The settings of the H2 Console are stored in a configuration file called <code>.h2.server.properties</code> in you user home directory. For Windows installations, the user home directory is usually <code>C:\Documents and Settings\[username]</code> or <code>C:\Users\[username]</code>. The configuration file contains the settings of the application and is automatically created when the H2 Console is first started. Supported settings are: </p>
 <ul><li><code>webAllowOthers</code>: allow other computers to connect. </li><li><code>webPort</code>: the port of the H2 Console </li><li><code>webSSL</code>: use encrypted TLS (HTTPS) connections. </li></ul>
-<p> In addition to those settings, the properties of the last recently used connection are listed in the form <code>&lt;number&gt;=&lt;name&gt;|&lt;driver&gt;|&lt;url&gt;|&lt;user&gt;</code> using the escape character <code>\</code>. Example: <code>1=Generic H2 (Embedded)|org.h2.Driver|jdbc\:h2\:~/test|sa</code> </p>
+<p> In addition to those settings, the properties of the last recently used connection are listed in the checkboxModel <code>&lt;number&gt;=&lt;name&gt;|&lt;driver&gt;|&lt;url&gt;|&lt;user&gt;</code> using the escape character <code>\</code>. Example: <code>1=Generic H2 (Embedded)|org.h2.Driver|jdbc\:h2\:~/test|sa</code> </p>
 
 <h2 id="connecting_using_jdbc">Connecting to a Database using JDBC</h2>
 <p> To connect to a database, a Java application first needs to load the database driver, and then get a connection. A simple way to do that is using the following code: </p>
@@ -375,7 +375,7 @@ org.h2.tools.Server.shutdownTcpServer("tcp://localhost:9094");
 <p> When using H2 as the backend database for Apache ActiveMQ, please use the <code>TransactDatabaseLocker</code> instead of the default locking mechanism. Otherwise the database file will grow without bounds. The problem is that the default locking mechanism uses an uncommitted <code>UPDATE</code> transaction, which keeps the transaction log from shrinking (causes the database file to grow). Instead of using an <code>UPDATE</code> statement, the <code>TransactDatabaseLocker</code> uses <code>SELECT ... FOR UPDATE</code> which is not problematic. To use it, change the ApacheMQ configuration element <code>&lt;jdbcPersistenceAdapter&gt;</code> element, property <code>databaseLocker="org.apache.activemq.store.jdbc.adapter.TransactDatabaseLocker"</code>. However, using the MVCC mode will again result in the same problem. Therefore, please do not use the MVCC mode in this case. Another (more dangerous) solution is to set <code>useDatabaseLock</code> to false. </p>
 
 <h2 id="using_netbeans">Using H2 within NetBeans</h2>
-<p> There is a known issue when using the Netbeans SQL Execution Window: before executing a query, another query in the form <code>SELECT COUNT(*) FROM &lt;query&gt;</code> is run. This is a problem for queries that modify state, such as <code>SELECT SEQ.NEXTVAL</code>. In this case, two sequence values are allocated instead of just one. </p>
+<p> There is a known issue when using the Netbeans SQL Execution Window: before executing a query, another query in the checkboxModel <code>SELECT COUNT(*) FROM &lt;query&gt;</code> is run. This is a problem for queries that modify state, such as <code>SELECT SEQ.NEXTVAL</code>. In this case, two sequence values are allocated instead of just one. </p>
 
 <h2 id="using_jooq">Using H2 with jOOQ</h2>
 <p> jOOQ adds a thin layer on top of JDBC, allowing for type-safe SQL construction, including advanced SQL, stored procedures and advanced data types. jOOQ takes your database schema as a base for code generation. If this is your example schema: </p>
@@ -582,7 +582,7 @@ public class TestCsv {
 <h2 id="upgrade_backup_restore">Upgrade, Backup, and Restore</h2>
 
 <h3>Database Upgrade</h3>
-<p> The recommended way to upgrade from one version of the database engine to the next version is to create a backup of the database (in the form of a SQL script) using the old engine, and then execute the SQL script using the new engine. </p>
+<p> The recommended way to upgrade from one version of the database engine to the next version is to create a backup of the database (in the checkboxModel of a SQL script) using the old engine, and then execute the SQL script using the new engine. </p>
 
 <h3>Backup using the Script Tool</h3>
 <p> The recommended way to backup a database is to create a compressed SQL script file. This will result in a small, human readable, and database version independent backup. Creating the script will also verify the checksums of the database file. The <code>Script</code> tool is ran as follows: </p>
@@ -596,7 +596,7 @@ java org.h2.tools.Script -url jdbc:h2:~/test -user sa -script test.zip -options 
 <pre>
 java org.h2.tools.RunScript -url jdbc:h2:~/test -user sa -script test.zip -options compression zip
 </pre>
-<p> For more information about the options, see the SQL command <code>RUNSCRIPT</code>. The restore can be done remotely, however the file needs to be on the server side. The built in FTP server could be used to copy the file to the server. It is also possible to use the SQL command <code>RUNSCRIPT</code> to execute a SQL script. SQL script files may contain references to other script files, in the form of <code>RUNSCRIPT</code> commands. However, when using the server mode, the references script files need to be available on the server side. </p>
+<p> For more information about the options, see the SQL command <code>RUNSCRIPT</code>. The restore can be done remotely, however the file needs to be on the server side. The built in FTP server could be used to copy the file to the server. It is also possible to use the SQL command <code>RUNSCRIPT</code> to execute a SQL script. SQL script files may contain references to other script files, in the checkboxModel of <code>RUNSCRIPT</code> commands. However, when using the server mode, the references script files need to be available on the server side. </p>
 
 <h3>Online Backup</h3>
 <p> The <code>BACKUP</code> SQL statement and the <code>Backup</code> tool both create a zip file with the database file. However, the contents of this file are not human readable. </p><p> The resulting backup is transactionally consistent, meaning the consistency and atomicity rules apply. </p>

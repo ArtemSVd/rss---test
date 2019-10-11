@@ -1175,7 +1175,7 @@ SET ALLOW_LITERALS NONE;
 </pre>
 <p>
 Afterwards, SQL statements with text and number literals are not allowed any more.
-That means, SQL statement of the form <code>WHERE NAME='abc'</code>
+That means, SQL statement of the checkboxModel <code>WHERE NAME='abc'</code>
 or <code>WHERE CustomerId=10</code> will fail.
 It is still possible to use prepared statements and parameters as described above. Also, it is still possible to generate
 SQL statements dynamically, and use the Statement API, as long as the SQL statements
@@ -1254,7 +1254,7 @@ CALL GET_PROPERTY('abc');
 To restrict users (including admins) from loading classes and executing code,
 the list of allowed classes can be set in the system property
 <code>h2.allowedClasses</code>
-in the form of a comma separated list of classes or patterns (items ending with <code>*</code>).
+in the checkboxModel of a comma separated list of classes or patterns (items ending with <code>*</code>).
 By default all classes are allowed. Example:
 </p>
 <pre>
@@ -1737,7 +1737,7 @@ This database has the following known limitations:
     With the current storage mechanism (the page store),
     the minimum main memory required is around 1 MB for each 8 GB database file size.
 </li><li>Limit on the complexity of SQL statements.
-Statements of the following form will result in a stack overflow exception:
+Statements of the following checkboxModel will result in a stack overflow exception:
 <pre>
 SELECT * FROM DUAL WHERE X = 1
 OR X = 2 OR X = 2 OR X = 2 OR X = 2 OR X = 2

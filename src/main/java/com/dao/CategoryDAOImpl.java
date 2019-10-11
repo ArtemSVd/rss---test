@@ -1,25 +1,25 @@
 package com.dao;
 
-import com.entity.Category;
-import com.utils.HibernateUtils;
+import com.model.Category;
+import com.config.HibernateUtils;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import java.sql.SQLException;
-import java.util.Collection;
+import org.springframework.stereotype.Repository;
+
 import java.util.List;
 
-
+@Repository
 public class CategoryDAOImpl implements CategoryDAO {
 
     @Override
-    public void addCategory(Category category) throws SQLException {
+    public void addCategory(Category category)   {
        try(Session session = HibernateUtils.getSessionFactory().openSession()) {
            session.save(category);
        }
     }
 
     @Override
-    public void updateCategory(Category category) throws SQLException {
+    public void updateCategory(Category category)   {
         try(Session session = HibernateUtils.getSessionFactory().openSession()){
             Transaction transaction = session.beginTransaction();
             session.update(category);
@@ -28,23 +28,21 @@ public class CategoryDAOImpl implements CategoryDAO {
     }
 
     @Override
-    public Category getCategoryById(int categoryId) throws SQLException {
+    public Category getCategoryById(int categoryId)   {
         try(Session session = HibernateUtils.getSessionFactory().openSession()){
-            Category category = session.get(Category.class, categoryId);
-            return category;
+            return session.get(Category.class, categoryId);
         }
     }
 
     @Override
-    public List<Category> getAllCategories() throws SQLException {
+    public List<Category> getAllCategories()   {
         try(Session session = HibernateUtils.getSessionFactory().openSession()){
-            List<Category> allCategories = session.createQuery("from Category ").list();
-            return allCategories;
+            return session.createQuery("from Category ").list();
         }
     }
 
     @Override
-    public void deleteCategory(Category category) throws SQLException {
+    public void deleteCategory(Category category)   {
         try(Session session = HibernateUtils.getSessionFactory().openSession()){
             Transaction transaction = session.beginTransaction();
             session.delete(session.merge(category));
@@ -52,8 +50,4 @@ public class CategoryDAOImpl implements CategoryDAO {
         }
     }
 
-    @Override
-    public Collection getCategoryByTopic(String topic) throws SQLException {
-        return null;
-    }
 }

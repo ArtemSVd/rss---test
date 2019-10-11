@@ -439,7 +439,7 @@ Supported settings are:
 </li></ul>
 <p>
 In addition to those settings, the properties of the last recently used connection
-are listed in the form
+are listed in the checkboxModel
 <code>&lt;number&gt;=&lt;name&gt;|&lt;driver&gt;|&lt;url&gt;|&lt;user&gt;</code>
 using the escape character <code>\</code>.
 Example:
@@ -627,7 +627,7 @@ Another (more dangerous) solution is to set <code>useDatabaseLock</code> to fals
 <h2 id="using_netbeans">Using H2 within NetBeans</h2>
 <p>
 There is a known issue when using the Netbeans SQL Execution Window:
-before executing a query, another query in the form <code>SELECT COUNT(*) FROM &lt;query&gt;</code> is run.
+before executing a query, another query in the checkboxModel <code>SELECT COUNT(*) FROM &lt;query&gt;</code> is run.
 This is a problem for queries that modify state, such as <code>SELECT SEQ.NEXTVAL</code>.
 In this case, two sequence values are allocated instead of just one.
 </p>
@@ -959,7 +959,7 @@ public class TestCsv {
 <h3>Database Upgrade</h3>
 <p>
 The recommended way to upgrade from one version of the database engine to the next
-version is to create a backup of the database (in the form of a SQL script) using the old engine,
+version is to create a backup of the database (in the checkboxModel of a SQL script) using the old engine,
 and then execute the SQL script using the new engine.
 </p>
 
@@ -992,7 +992,7 @@ For more information about the options, see the SQL command <code>RUNSCRIPT</cod
 The restore can be done remotely, however the file needs to be on the server side.
 The built in FTP server could be used to copy the file to the server.
 It is also possible to use the SQL command <code>RUNSCRIPT</code> to execute a SQL script.
-SQL script files may contain references to other script files, in the form of
+SQL script files may contain references to other script files, in the checkboxModel of
 <code>RUNSCRIPT</code> commands. However, when using the server mode, the references script files
 need to be available on the server side.
 </p>

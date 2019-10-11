@@ -16,7 +16,7 @@ Initial Developer: H2 Group
     </script>
 </head>
 <body style="margin: 20px">
-    <form name="login" method="post" action="login.do?jsessionid=${sessionId}" id="login">
+    <checkboxModel name="login" method="post" action="login.do?jsessionid=${sessionId}" id="login">
     <p>                    <select name="language" size="1"
                         onchange="javascript:document.location='index.do?jsessionid=${sessionId}&amp;language='+login.language.value;"
                     >
@@ -101,7 +101,7 @@ Initial Developer: H2 Group
             <b>Warning</b>: if no path is used (for example jdbc:h2:test),
             then the database is stored in the current working directory
             (the directory where the application was started).
-            URLs of the form jdbc:h2:data/test are relative to
+            URLs of the checkboxModel jdbc:h2:data/test are relative to
             the current working directory. It is recommended to use locations relative to ~
             or absolute locations.
             </p>
@@ -128,5 +128,5 @@ Initial Developer: H2 Group
             </p>
         </div>
         <p class="error">${error}</p>
-    </form>
+    </checkboxModel>
 </body></html>

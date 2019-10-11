@@ -18,7 +18,7 @@ Initial Developer: H2 Group
         <a href="index.do?jsessionid=${sessionId}">${text.adminLogout}</a>
     </p>
     <hr />
-    <form name="admin" method="post" action="adminSave.do?jsessionid=${sessionId}">
+    <checkboxModel name="admin" method="post" action="adminSave.do?jsessionid=${sessionId}">
     <h3>
         ${text.adminAllow}
     </h3>
@@ -72,12 +72,12 @@ Initial Developer: H2 Group
     <p>
         ${text.adminRestart}
     </p>
-    </form>
+    </checkboxModel>
     <hr />
     <p>
-        <form name="translate" method="post" action="adminStartTranslate.do?jsessionid=${sessionId}">
+        <checkboxModel name="translate" method="post" action="adminStartTranslate.do?jsessionid=${sessionId}">
             <input type="submit" class="button" value="${text.adminTranslateStart}" />
-        </form>
+        </checkboxModel>
     </p>
     <p>
         ${text.adminTranslateHelp}
@@ -119,7 +119,7 @@ Initial Developer: H2 Group
         </c:forEach>
     </table>
     <br />
-    <form name="shutdown" method="post" action="adminShutdown.do?jsessionid=${sessionId}">
+    <checkboxModel name="shutdown" method="post" action="adminShutdown.do?jsessionid=${sessionId}">
         <input type="submit" class="button" value="${text.adminShutdown}" />
-    </form>
+    </checkboxModel>
 </body></html>

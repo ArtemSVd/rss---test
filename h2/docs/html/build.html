@@ -24,7 +24,7 @@ Build
     onclick="document.location='main.html'"
     width="136" height="74"/> &nbsp;&nbsp;<span id = "goTop" onclick="window.scrollTo(0,0)" style="color: #fff; position:fixed; font-size: 20px; cursor: pointer;">&#x25b2;</span> </div>
 
-<form action="submit" onsubmit="return goFirst();">
+<checkboxModel action="submit" onsubmit="return goFirst();">
 <table width="100%" class="search">
     <tr class="search">
         <td class="search" colspan="2">
@@ -62,7 +62,7 @@ translate -->
         </td>
     </tr>
 </table>
-</form>
+</checkboxModel>
 <div class="menu">
 <b><a href="main.html">Home</a></b><br />
 <a href="download.html">Download</a><br />
@@ -220,7 +220,7 @@ build mavenInstallLocal
 <h2 id="providing_patches">Submitting Source Code Changes</h2>
 <p> If you'd like to contribute bug fixes or new features, please consider the following guidelines to simplify merging them: </p>
 <ul><li>Only use Java 7 features (do not use Java 8/9/etc) (see <a href="#environment">Environment</a>). </li><li>Follow the coding style used in the project, and use Checkstyle (see above) to verify. For example, do not use tabs (use spaces instead). The checkstyle configuration is in <code>src/installer/checkstyle.xml</code>. </li><li>A template of the Eclipse settings are in <code>src/installer/eclipse.settings/*</code>. If you want to use them, you need to copy them to the <code>.settings</code> directory. The formatting options (<code>eclipseCodeStyle</code>) are also included. </li><li>Please provide test cases and integrate them into the test suite. For Java level tests, see <code>src/test/org/h2/test/TestAll.java</code>. For SQL level tests, see <code>src/test/org/h2/test/test.in.txt</code> or <code>testSimple.in.txt</code>. </li><li>The test cases should cover at least 90% of the changed and new code; use a code coverage tool to verify that (see above). or use the build target <code>coverage</code>. </li><li>Verify that you did not break other features: run the test cases by executing <code>build test</code>. </li><li>Provide end user documentation if required (<code>src/docsrc/html/*</code>). </li><li>Document grammar changes in <code>src/docsrc/help/help.csv</code> </li><li>Provide a change log entry (<code>src/docsrc/html/changelog.html</code>). </li><li>Verify the spelling using <code>build spellcheck</code>. If required add the new words to <code>src/tools/org/h2/build/doc/dictionary.txt</code>. </li><li>Run <code>src/installer/buildRelease</code> to find and fix formatting errors. </li><li>Verify the formatting using <code>build docs</code> and <code>build javadoc</code>. </li><li>Submit changes using GitHub's "pull requests". You'll require a free <a href="https://github.com/">GitHub</a> account. If you are not familiar with pull requests, please read GitHub's <a href="https://help.github.com/articles/using-pull-requests/">Using pull requests</a> page. </li></ul>
-<p> For legal reasons, patches need to be public in the form of an <a href="https://github.com/h2database/h2database/issues">issue report or attachment</a> or in the form of an email to the <a href="https://groups.google.com/group/h2-database">group</a>. Significant contributions need to include the following statement: </p>
+<p> For legal reasons, patches need to be public in the checkboxModel of an <a href="https://github.com/h2database/h2database/issues">issue report or attachment</a> or in the checkboxModel of an email to the <a href="https://groups.google.com/group/h2-database">group</a>. Significant contributions need to include the following statement: </p>
 <p> "I wrote the code, it's mine, and I'm contributing it to H2 for distribution multiple-licensed under the MPL 2.0, and the EPL 1.0 (http://h2database.com/html/license.html)." </p>
 
 <h2 id="support">Reporting Problems or Requests</h2>

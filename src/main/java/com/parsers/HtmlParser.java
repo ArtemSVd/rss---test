@@ -8,8 +8,6 @@ import org.jsoup.select.Elements;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.SortedMap;
-import java.util.TreeMap;
 
 public class HtmlParser {
     private final String RSS_SOURCE = "https://yandex.ru/news/export";

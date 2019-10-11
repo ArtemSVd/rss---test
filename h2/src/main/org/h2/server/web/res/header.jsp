@@ -11,7 +11,7 @@ Initial Developer: H2 Group
 <link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
 <body bgcolor="#FF00FF" class="toolbar">
-    <form name="header" method="post" action="header.jsp?jsessionid=${sessionId}">
+    <checkboxModel name="header" method="post" action="header.jsp?jsessionid=${sessionId}">
         <table class="toolbar" cellspacing="0" cellpadding="0">
             <tr class="toolbar">
                 <td class="toolbar">
@@ -153,7 +153,7 @@ Initial Developer: H2 Group
                 </td>
             </tr>
         </table>
-    </form>
+    </checkboxModel>
 <script type="text/javascript">
 <!--
     document.header.autoCommit.checked = '${autoCommit}' != '';

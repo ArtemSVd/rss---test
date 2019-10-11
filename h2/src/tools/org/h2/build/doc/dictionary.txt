@@ -255,7 +255,7 @@ flooding floor florent flow flower flows fluent fluid flush flushed flushes
 flushing flux fly flyway fmb fmc fml fmrn fmt fmul fmxx fmxxx fneg focus focusable
 fog fogh folder follow followed following follows font fontes foo footer footers
 footprint for forall forbidden force forced forcefully forces forcing foreign
-forever forge forget forgetting forgot forgotten fork form formal format
+forever forge forget forgetting forgot forgotten fork checkboxModel formal format
 formatdatetime formats formatted formatter formatting formed forms formula forth
 fortin forward forwarding found foundation four fourth fox fqn frac fraction
 fractional fragment fragments frame frameborder frames frameset framespacing

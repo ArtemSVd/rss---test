@@ -1,7 +1,7 @@
 package com.parsers;
 
-import com.entity.Category;
-import com.entity.News;
+import com.model.Category;
+import com.model.News;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.text.ParseException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -20,9 +21,9 @@ public class XmlParser {
     private final String PUB_DATE = "pubDate";
     private final String ITEM = "item";
 
-    public Set<News> getNewsByCategory(Category category) throws IOException, XMLStreamException, ParseException {
+    public Set<News> getNewsByCategory(Category category,Date currentDate) throws IOException, XMLStreamException, ParseException {
         URL url = new URL(category.getUrl());
-
+        category.setLastUpdate(currentDate);
         Set<News> set = new HashSet<>();
         XMLInputFactory inputFactory = XMLInputFactory.newInstance();
 
@@ -64,7 +65,7 @@ public class XmlParser {
         }
         return  set;
     }
-    private static String getCharacterData(XMLEvent event, XMLEventReader eventReader)
+    private  String getCharacterData(XMLEvent event, XMLEventReader eventReader)
             throws XMLStreamException {
         String result = "";
         event = eventReader.nextEvent();

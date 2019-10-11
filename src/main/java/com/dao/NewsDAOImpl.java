@@ -1,16 +1,18 @@
 package com.dao;
 
-import com.entity.Category;
-import com.entity.News;
-import com.utils.HibernateUtils;
-import org.hibernate.Criteria;
+import com.model.News;
+import com.config.HibernateUtils;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import org.hibernate.criterion.CriteriaSpecification;
-import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.criterion.Order;
+import org.hibernate.criterion.Projections;
+import org.hibernate.criterion.Restrictions;
+import org.hibernate.transform.Transformers;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+@Repository
 public class NewsDAOImpl implements NewsDAO{
 
     @Override
@@ -30,20 +32,19 @@ public class NewsDAOImpl implements NewsDAO{
     }
 
     @Override
-    public Set<News> getNewsyById(int newsId) {
+    public News getNewsyById(int newsId) {
         try(Session session = HibernateUtils.getSessionFactory().openSession()){
-            List<News> list = session.createQuery("from News WHERE category=" + newsId).list();
-
-            return new HashSet<News>(list);
+            return (News) session.createQuery("from News WHERE category=" + newsId)
+                    .getSingleResult();
         }
     }
 
     @Override
-    public Set<News> getAllNews() {
+    public List<News> getAllNews() {
         try(Session session = HibernateUtils.getSessionFactory().openSession()){
-            List<News> newsList = session.createQuery("from News ").list();
-            Set<News> set = new HashSet(newsList);
-            return set;
+            @SuppressWarnings("unchecked")
+            List<News> news = session.createQuery("from News ").list();
+            return news;
         }
     }
 
@@ -54,34 +55,40 @@ public class NewsDAOImpl implements NewsDAO{
         }
     }
 
-    @Override
-    public Collection getNewsByCategory(Category category) {
-        return null;
-    }
-
-    public List<News> getSortedNews() {
+   @Override
+    public List<News> getSortedNewsBySelectedCategories(Set<Integer> selectedCategories) {
         try(Session session = HibernateUtils.getSessionFactory().openSession()){
-            ArrayList<Integer> categoryList  = new ArrayList<>();
-            categoryList.add(10);
-            categoryList.add(55);
-            categoryList.add(48);
-            DetachedCriteria criteria = DetachedCriteria.forClass(News.class);
-            criteria.setResultTransformer(CriteriaSpecification.DISTINCT_ROOT_ENTITY);
-            List<News> newsList = session.createQuery("select distinct n from News n" +
-                    " where n.category.categoryId IN (:cat) group by n.newsId,n.title  ORDER BY n.date desc")
-                    .setParameterList("cat",categoryList)
-                    .setFirstResult(0)
+
+            @SuppressWarnings("unchecked")
+            List<News> newsList = session.createCriteria(News.class)
+                    .setProjection(Projections.distinct(Projections.projectionList()
+                            .add(Projections.property("date"),"date")
+                            .add(Projections.property("url"),"url")
+                            .add(Projections.property("title"),"title")))
+                    .setResultTransformer(Transformers.aliasToBean(News.class))
                     .setMaxResults(40)
+                    .add(Restrictions.in("category.categoryId",selectedCategories))
+                    .addOrder(Order.desc("date"))
                     .list();
 
+            return newsList;
+        }
+    }
 
-            List<String> list = session.createQuery("select distinct title from News n where n.category.categoryId IN (:cat) ")
-                    .setParameterList("cat",categoryList)
-                    .setFirstResult(1)
-                    .setMaxResults(20).list();
-            for(String s : list){
-                System.out.println(s);
-            }
+    @Override
+    public List<News> getSortedNewsByAllCategories() {
+        try (Session session = HibernateUtils.getSessionFactory().openSession()) {
+
+            @SuppressWarnings("unchecked")
+            List<News> newsList = session.createCriteria(News.class)
+                    .setProjection(Projections.distinct(Projections.projectionList()
+                            .add(Projections.property("date"), "date")
+                            .add(Projections.property("url"), "url")
+                            .add(Projections.property("title"), "title")))
+                    .setResultTransformer(Transformers.aliasToBean(News.class))
+                    .setMaxResults(20)
+                    .addOrder(Order.desc("date"))
+                    .list();
 
             return newsList;
         }

@@ -177,7 +177,7 @@ the entries of the map can be be efficiently accessed like a random-access list
 That also means getting the median of two keys is very fast,
 and a range of keys can be counted very quickly.
 The iterator supports fast skipping.
-This is possible because internally, each map is organized in the form of a counted B+-tree.
+This is possible because internally, each map is organized in the checkboxModel of a counted B+-tree.
 </p><p>
 In database terms, a map can be used like a table, where the key of the map is the primary key of the table,
 and the value is the row. A map can also represent an index, where the key of the map is the key
@@ -476,7 +476,7 @@ The data is stored in one file.
 The file contains two file headers (for safety), and a number of chunks.
 The file headers are one block each; a block is 4096 bytes.
 Each chunk is at least one block, but typically 200 blocks or more.
-Data is stored in the chunks in the form of a
+Data is stored in the chunks in the checkboxModel of a
 <a href="http://en.wikipedia.org/wiki/Log-structured_file_system">log structured storage</a>.
 There is one chunk for every version.
 </p>
@@ -532,7 +532,7 @@ The headers contain the following data:
 H:2,block:2,blockSize:1000,chunk:7,created:1441235ef73,format:1,version:7,fletcher:3044e6cc
 </pre>
 <p>
-The data is stored in the form of a key-value pair.
+The data is stored in the checkboxModel of a key-value pair.
 Each value is stored as a hexadecimal number. The entries are:
 </p>
 <ul><li>H: The entry "H:2" stands for the the H2 database.
@@ -680,7 +680,7 @@ This allows to estimate the amount of free space within a block, in addition to 
 <p>
 The total number of entries in child pages are kept to allow efficient range counting,
 lookup by index, and skip operations.
-The pages form a <a href="http://www.chiark.greenend.org.uk/~sgtatham/algorithms/cbtree.html">counted B-tree</a>.
+The pages checkboxModel a <a href="http://www.chiark.greenend.org.uk/~sgtatham/algorithms/cbtree.html">counted B-tree</a>.
 </p>
 <p>
 Data compression: The data after the page type are optionally compressed using the LZF algorithm.

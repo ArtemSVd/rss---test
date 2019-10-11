@@ -1,31 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="rss-test:war" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c5f344de-ee60-4a03-bc26-adfc4f4ea93b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_2_5_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/advanced.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/advanced.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/architecture.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/architecture.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/build.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/build.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/changelog.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/changelog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/datatypes.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/datatypes.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/download.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/download.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/faq.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/faq.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/features.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/features.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/functions.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/functions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/grammar.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/grammar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/history.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/installation.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/installation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/jaqu.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/jaqu.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/license.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/license.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/links.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/links.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/mainWeb.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/mainWeb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/mvstore.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/mvstore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/performance.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/performance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/quickstart.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/quickstart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/roadmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/roadmap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/systemtables.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/systemtables.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/html/tutorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/html/tutorial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/api/ErrorCode.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/api/ErrorCode.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/engine/Constants.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/engine/Constants.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/engine/DbSettings.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/engine/DbSettings.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/engine/SysProperties.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/engine/SysProperties.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/jdbc/JdbcConnection.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/jdbc/JdbcConnection.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/jdbcx/JdbcDataSource.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/docs/javadoc/org/h2/jdbcx/JdbcDataSource.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/help/help.csv" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/help/help.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/html/advanced.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/html/advanced.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/html/build.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/html/build.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/html/fragments.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/html/fragments.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/html/license.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/html/license.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/html/mainWeb.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/html/mainWeb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/html/mvstore.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/html/mvstore.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/html/performance.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/html/performance.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/html/roadmap.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/html/roadmap.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/html/tutorial.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/html/tutorial.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/text/_docs_en.utf8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/text/_docs_en.utf8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/text/_docs_ja.utf8.txt" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/text/_docs_ja.utf8.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/docsrc/textbase/_docs_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/docsrc/textbase/_docs_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/main/org/h2/bnf/package.html" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/main/org/h2/bnf/package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/main/org/h2/res/help.csv" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/main/org/h2/res/help.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/admin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/adminLogin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/adminLogin.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/query.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/query.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/tools.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/main/org/h2/server/web/res/tools.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/h2/src/tools/org/h2/build/doc/dictionary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/h2/src/tools/org/h2/build/doc/dictionary.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/dao/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/dao/CategoryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/dao/NewsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/NewsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/dao/NewsDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/NewsDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/entity/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/entity/News.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/qwerty/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/qwerty/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/qwerty/Themes.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gui/utils/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/utils/HibernateUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rss-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rss-test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/NewsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/NewsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/NewsDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/NewsDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/entity/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/News.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parsers/HtmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parsers/HtmlParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/parsers/XmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parsers/XmlParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/utils/HibernateUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/config/HibernateUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/dao/CategoryDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/dao/CategoryDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/dao/NewsDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/dao/NewsDAOImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/entity/Category.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/entity/News.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/qwerty/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/qwerty/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/qwerty/Themes.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/gui/utils/HibernateUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/CategoryDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dao/CategoryDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/CategoryDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dao/CategoryDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/NewsDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dao/NewsDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/NewsDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dao/NewsDAOImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/entity/News.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/parsers/HtmlParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parsers/HtmlParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/parsers/XmlParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parsers/XmlParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/utils/HibernateUtils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,6 +126,13 @@
         <item name="test" type="feb32156:DbDataSourceImpl" />
         <item name="TEST: database" type="2aa06773:H2ImplModel$Database" />
         <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
+        <item name="CATEGORY: table" type="818c1b4a:H2ImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="test" type="feb32156:DbDataSourceImpl" />
+        <item name="TEST: database" type="2aa06773:H2ImplModel$Database" />
+        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
         <item name="NEWS: table" type="818c1b4a:H2ImplModel$Table" />
       </path>
     </expand>
@@ -76,6 +143,9 @@
       <list>
         <option value="module-info" />
         <option value="FxmlFile" />
+        <option value="jsf" />
+        <option value="Jsp File" />
+        <option value="CSS File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -83,6 +153,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -102,6 +179,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -111,6 +189,7 @@
       <recent name="gui.model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="C:\Users\Артем1\IdeaProjects\rss-test\src\main\resources" />
       <recent name="C:\Users\Артем1\IdeaProjects\rss-test\src\main\java\gui" />
     </key>
@@ -127,7 +206,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.26">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.App" />
       <module name="rss-test" />
@@ -187,6 +266,86 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tomcat 9.0.26" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.26" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="rss-test:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_rss---test" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="45243" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="rss-test:war" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+      <item itemvalue="Application.Gui" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Themes" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.26" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
@@ -200,22 +359,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@13ad0423" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@13ad0423" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@c95469" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@13ad0423" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@10d7553" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -238,6 +382,11 @@
       <workItem from="1570199095331" duration="28155000" />
       <workItem from="1570375525742" duration="20198000" />
       <workItem from="1570433898930" duration="14294000" />
+      <workItem from="1570547366898" duration="7110000" />
+      <workItem from="1570555124164" duration="12280000" />
+      <workItem from="1570613115137" duration="376000" />
+      <workItem from="1570639187476" duration="12820000" />
+      <workItem from="1570710544031" duration="9160000" />
     </task>
     <servers />
   </component>

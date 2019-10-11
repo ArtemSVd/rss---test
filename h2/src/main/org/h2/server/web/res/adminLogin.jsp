@@ -10,7 +10,7 @@ Initial Developer: H2 Group
     <link rel="stylesheet" type="text/css" href="stylesheet.css" />
 </head>
 <body style="margin: 20px">
-    <form name="adminLogin" method="post" action="admin.do?jsessionid=${sessionId}">
+    <checkboxModel name="adminLogin" method="post" action="admin.do?jsessionid=${sessionId}">
         <table class="login" cellspacing="0" cellpadding="0">
             <tr class="login">
                 <th class="login">${text.adminLogin}</th>
@@ -34,7 +34,7 @@ Initial Developer: H2 Group
         </table>
         <br />
         <p class="error">${error}</p>
-    </form>
+    </checkboxModel>
     <script type="text/javascript">
         <!--
             document.adminLogin.password.focus();

@@ -76,7 +76,7 @@ UPDATE PERSON P SET NAME=(SELECT A.NAME FROM ADDRESS A WHERE A.ID=P.ID);
 "Commands (DML)","DELETE","
 DELETE [ TOP term ] FROM tableName [ WHERE expression ] [ LIMIT term ]
 ","
-Deletes rows form a table.
+Deletes rows checkboxModel a table.
 If TOP or LIMIT is specified, at most the specified number of rows are deleted (no limit if null or smaller than zero).
 ","
 DELETE FROM TEST WHERE ID=2
@@ -3815,7 +3815,7 @@ CALL UTF8TOSTRING(STRINGTOUTF8('This is a test'))
 "Functions (String)","XMLATTR","
 XMLATTR(nameString, valueString)
 ","
-Creates an XML attribute element of the form ""name=value"".
+Creates an XML attribute element of the checkboxModel ""name=value"".
 The value is encoded as XML text.
 This method returns a string.
 ","
@@ -4403,7 +4403,7 @@ Creates table links for all tables in a schema.
 If tables with the same name already exist, they are dropped first.
 The target schema is created automatically if it does not yet exist.
 The driver name may be empty if the driver is already loaded.
-The list of tables linked is returned in the form of a result set.
+The list of tables linked is returned in the checkboxModel of a result set.
 Admin rights are required to execute this command.
 ","
 CALL LINK_SCHEMA('TEST2', '', 'jdbc:h2:test2', 'sa', 'sa', 'PUBLIC');
@@ -4537,7 +4537,7 @@ TRANSACTION_ID()
 ","
 Returns the current transaction id for this session.
 This method returns NULL if there is no uncommitted change, or if the the database is not persisted.
-Otherwise a value of the following form is returned:
+Otherwise a value of the following checkboxModel is returned:
 ""logFileId-position-sessionId"".
 This method returns a string.
 The value is unique across database restarts (values are not re-used).

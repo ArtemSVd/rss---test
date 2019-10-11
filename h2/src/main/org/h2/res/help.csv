@@ -32,7 +32,7 @@ Updates data in a table."
 "Commands (DML)","DELETE","
 DELETE [ TOP term ] FROM tableName [ WHERE expression ] [ LIMIT term ]
 ","
-Deletes rows form a table."
+Deletes rows checkboxModel a table."
 "Commands (DML)","BACKUP","
 BACKUP TO fileNameString
 ","
@@ -1356,7 +1356,7 @@ Decodes a byte array in the UTF8 format to a string."
 "Functions (String)","XMLATTR","
 XMLATTR(nameString, valueString)
 ","
-Creates an XML attribute element of the form ""name=value""."
+Creates an XML attribute element of the checkboxModel ""name=value""."
 "Functions (String)","XMLNODE","
 XMLNODE(elementString [, attributesString [, contentString [, indentBoolean]]])
 ","

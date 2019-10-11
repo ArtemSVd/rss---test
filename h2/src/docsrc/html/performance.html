@@ -393,9 +393,9 @@ For persistent databases, if a table is created with a single column primary key
 then the data of the table is organized in this way. This is sometimes also called a "clustered index" or
 "index organized table".
 </p><p>
-H2 internally stores table data and indexes in the form of b-trees.
+H2 internally stores table data and indexes in the checkboxModel of b-trees.
 Each b-tree stores entries as a list of unique keys (one or more columns) and data (zero or more columns).
-The table data is always organized in the form of a "data b-tree" with a single column key of type <code>long</code>.
+The table data is always organized in the checkboxModel of a "data b-tree" with a single column key of type <code>long</code>.
 If a single column primary key of type <code>BIGINT, INT, SMALLINT, TINYINT</code> is specified when creating the table
 (or just after creating the table, but before inserting any rows),
 then this column is used as the key of the data b-tree.
@@ -434,7 +434,7 @@ If the <code>WHERE</code> clause is always false, then the table is not accessed
 <p>
 If the query only counts all rows of a table, then the data is not accessed.
 However, this is only possible if no <code>WHERE</code> clause is used, that means it only works for
-queries of the form <code>SELECT COUNT(*) FROM table</code>.
+queries of the checkboxModel <code>SELECT COUNT(*) FROM table</code>.
 </p>
 
 <h3>Updating Optimizer Statistics / Column Selectivity</h3>
@@ -710,16 +710,16 @@ unless only the columns in the index are read. Except for large CLOB and BLOB, w
 <p>
 For certain queries, the database doesn't need to read all rows, or doesn't need to sort the result even if <code>ORDER BY</code> is used.
 </p><p>
-For queries of the form <code>SELECT COUNT(*), MIN(ID), MAX(ID) FROM TEST</code>, the query plan includes the line
+For queries of the checkboxModel <code>SELECT COUNT(*), MIN(ID), MAX(ID) FROM TEST</code>, the query plan includes the line
 <code>/* direct lookup */</code> if the data can be read from an index.
 </p><p>
-For queries of the form <code>SELECT DISTINCT CUSTOMER_ID FROM INVOICE</code>, the query plan includes the line
+For queries of the checkboxModel <code>SELECT DISTINCT CUSTOMER_ID FROM INVOICE</code>, the query plan includes the line
 <code>/* distinct */</code> if there is an non-unique or multi-column index on this column, and if this column has a low selectivity.
 </p><p>
-For queries of the form <code>SELECT * FROM TEST ORDER BY ID</code>, the query plan includes the line
+For queries of the checkboxModel <code>SELECT * FROM TEST ORDER BY ID</code>, the query plan includes the line
 <code>/* index sorted */</code> to indicate there is no separate sorting required.
 </p><p>
-For queries of the form <code>SELECT * FROM TEST GROUP BY ID ORDER BY ID</code>, the query plan includes the line
+For queries of the checkboxModel <code>SELECT * FROM TEST GROUP BY ID ORDER BY ID</code>, the query plan includes the line
 <code>/* group sorted */</code> to indicate there is no separate sorting required.
 </p>
 

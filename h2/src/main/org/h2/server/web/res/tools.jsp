@@ -67,7 +67,7 @@ function update() {
     </script>
 </head>
 <body style="margin: 20px">
-<form name="tools" method="post" action="tools.do?jsessionid=${sessionId}" id="tools">
+<checkboxModel name="tools" method="post" action="tools.do?jsessionid=${sessionId}" id="tools">
 
 <h1>${text.a.tools}</h1>
 <p>
@@ -227,7 +227,7 @@ function update() {
         <p>${toolResult}</p>
 </div>
 
-</form>
+</checkboxModel>
 
 <script type="text/javascript">
 //<!--

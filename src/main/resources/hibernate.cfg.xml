@@ -7,12 +7,12 @@
     <session-factory>
         <!-- Database connection settings -->
         <property name="hibernate.connection.driver_class">org.h2.Driver</property>
-        <property name="hibernate.connection.url">jdbc:h2:~/test</property>
+        <property name="hibernate.connection.url">jdbc:h2:~/test;AUTO_SERVER=TRUE</property>
         <property name="hibernate.connection.username">sa</property>
         <!-- JDBC connection pool (use the built-in) -->
         <property name="hibernate.connection.pool_size">2</property>
         <!-- Echo all executed SQL to stdout -->
-        <property name="show_sql">false</property>
+        <property name="show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
         <property name="hibernate.generate_statistics">false</property>
         <!-- SQL dialect -->
@@ -22,13 +22,10 @@
         <property name="hibernate.connection.characterEncoding">utf8</property>
         <property name="hibernate.connection.useUnicode">true</property>
 
-        <property name="hibernate.order_inserts">true</property>
-        <property name="hibernate.order_updates">true</property>
-
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <mapping class="com.entity.Category" />
-        <mapping class="com.entity.News"/>
+        <mapping class="com.model.Category" />
+        <mapping class="com.model.News"/>
 
     </session-factory>
 </hibernate-configuration>

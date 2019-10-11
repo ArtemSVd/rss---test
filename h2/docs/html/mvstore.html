@@ -24,7 +24,7 @@ MVStore
     onclick="document.location='main.html'"
     width="136" height="74"/> &nbsp;&nbsp;<span id = "goTop" onclick="window.scrollTo(0,0)" style="color: #fff; position:fixed; font-size: 20px; cursor: pointer;">&#x25b2;</span> </div>
 
-<form action="submit" onsubmit="return goFirst();">
+<checkboxModel action="submit" onsubmit="return goFirst();">
 <table width="100%" class="search">
     <tr class="search">
         <td class="search" colspan="2">
@@ -62,7 +62,7 @@ translate -->
         </td>
     </tr>
 </table>
-</form>
+</checkboxModel>
 <div class="menu">
 <b><a href="main.html">Home</a></b><br />
 <a href="download.html">Download</a><br />
@@ -204,7 +204,7 @@ s.close();
 <h2 id="features">Features</h2>
 
 <h3 id="maps">Maps</h3>
-<p> Each store contains a set of named maps. A map is sorted by key, and supports the common lookup operations, including access to the first and last key, iterate over some or all keys, and so on. </p><p> Also supported, and very uncommon for maps, is fast index lookup: the entries of the map can be be efficiently accessed like a random-access list (get the entry at the given index), and the index of a key can be calculated efficiently. That also means getting the median of two keys is very fast, and a range of keys can be counted very quickly. The iterator supports fast skipping. This is possible because internally, each map is organized in the form of a counted B+-tree. </p><p> In database terms, a map can be used like a table, where the key of the map is the primary key of the table, and the value is the row. A map can also represent an index, where the key of the map is the key of the index, and the value of the map is the primary key of the table (for non-unique indexes, the key of the map must also contain the primary key). </p>
+<p> Each store contains a set of named maps. A map is sorted by key, and supports the common lookup operations, including access to the first and last key, iterate over some or all keys, and so on. </p><p> Also supported, and very uncommon for maps, is fast index lookup: the entries of the map can be be efficiently accessed like a random-access list (get the entry at the given index), and the index of a key can be calculated efficiently. That also means getting the median of two keys is very fast, and a range of keys can be counted very quickly. The iterator supports fast skipping. This is possible because internally, each map is organized in the checkboxModel of a counted B+-tree. </p><p> In database terms, a map can be used like a table, where the key of the map is the primary key of the table, and the value is the row. A map can also represent an index, where the key of the map is the key of the index, and the value of the map is the primary key of the table (for non-unique indexes, the key of the map must also contain the primary key). </p>
 
 <h3 id="versions">Versions</h3>
 <p> A version is a snapshot of all the data of all maps at a given point in time. Creating a snapshot is fast: only those pages that are changed after a snapshot are copied. This behavior is also called COW (copy on write). Old versions are readable. Rollback to an old version is supported. </p><p> The following sample code show how to create a store, open a map, add some data, and access the current and an old version: </p>
@@ -300,7 +300,7 @@ MVStore s = new MVStore.Builder().
 <p> For H2 version 1.4 and newer, the MVStore is the default storage engine (supporting SQL, JDBC, transactions, MVCC, and so on). For older versions, append <code>;MV_STORE=TRUE</code> to the database URL. Even though it can be used with the default table level locking, by default the MVCC mode is enabled when using the MVStore. </p>
 
 <h2 id="fileFormat">File Format</h2>
-<p> The data is stored in one file. The file contains two file headers (for safety), and a number of chunks. The file headers are one block each; a block is 4096 bytes. Each chunk is at least one block, but typically 200 blocks or more. Data is stored in the chunks in the form of a <a href="http://en.wikipedia.org/wiki/Log-structured_file_system">log structured storage</a>. There is one chunk for every version. </p>
+<p> The data is stored in one file. The file contains two file headers (for safety), and a number of chunks. The file headers are one block each; a block is 4096 bytes. Each chunk is at least one block, but typically 200 blocks or more. Data is stored in the chunks in the checkboxModel of a <a href="http://en.wikipedia.org/wiki/Log-structured_file_system">log structured storage</a>. There is one chunk for every version. </p>
 <pre>
 [ file header 1 ] [ file header 2 ] [ chunk ] [ chunk ] ... [ chunk ]
 </pre>
@@ -332,7 +332,7 @@ s.close();
 <pre>
 H:2,block:2,blockSize:1000,chunk:7,created:1441235ef73,format:1,version:7,fletcher:3044e6cc
 </pre>
-<p> The data is stored in the form of a key-value pair. Each value is stored as a hexadecimal number. The entries are: </p>
+<p> The data is stored in the checkboxModel of a key-value pair. Each value is stored as a hexadecimal number. The entries are: </p>
 <ul><li>H: The entry "H:2" stands for the the H2 database. </li><li>block: The block number where one of the newest chunks starts (but not necessarily the newest). </li><li>blockSize: The block size of the file; currently always hex 1000, which is decimal 4096, to match the <a href="http://en.wikipedia.org/wiki/Disk_sector">disk sector</a> length of modern hard disks. </li><li>chunk: The chunk id, which is normally the same value as the version; however, the chunk id might roll over to 0, while the version doesn't. </li><li>created: The number of milliseconds since 1970 when the file was created. </li><li>format: The file format number. Currently 1. </li><li>version: The version number of the chunk. </li><li>fletcher: The <a href="http://en.wikipedia.org/wiki/Fletcher's_checksum"> Fletcher-32 checksum</a> of the header. </li></ul>
 <p> When opening the file, both headers are read and the checksum is verified. If both headers are valid, the one with the newer version is used. The chunk with the latest version is then detected (details about this see below), and the rest of the metadata is read from there. If the chunk id, block and version are not stored in the file header, then the latest chunk lookup starts with the last chunk in the file. </p>
 <p>
@@ -358,7 +358,7 @@ chunk:1,block:2,version:1,fletcher:aed9a4f6
 <ul><li>length (int): Length of the page in bytes. </li><li>checksum (short): Checksum (chunk id xor offset within the chunk xor page length). </li><li>mapId (variable size int): The id of the map this page belongs to. </li><li>len (variable size int): The number of keys in the page. </li><li>type (byte): The page type (0 for leaf page, 1 for internal node; plus 2 if the keys and values are compressed with the LZF algorithm, or plus 6 if the keys and values are compressed with the Deflate algorithm). </li><li>children (array of long; internal nodes only): The position of the children. </li><li>childCounts (array of variable size long; internal nodes only): The total number of entries for the given child page. </li><li>keys (byte array): All keys, stored depending on the data type. </li><li>values (byte array; leaf pages only): All values, stored depending on the data type. </li></ul>
 <p> Even though this is not required by the file format, pages are stored in the following order: For each map, the root page is stored first, then the internal nodes (if there are any), and then the leaf pages. This should speed up reads for media where sequential reads are faster than random access reads. The metadata map is stored at the end of a chunk. </p>
 <p> Pointers to pages are stored as a long, using a special format: 26 bits for the chunk id, 32 bits for the offset within the chunk, 5 bits for the length code, 1 bit for the page type (leaf or internal node). The page type is encoded so that when clearing or removing a map, leaf pages don't have to be read (internal nodes do have to be read in order to know where all the pages are; but in a typical B-tree the vast majority of the pages are leaf pages). The absolute file position is not included so that chunks can be moved within the file without having to change page pointers; only the chunk metadata needs to be changed. The length code is a number from 0 to 31, where 0 means the maximum length of the page is 32 bytes, 1 means 48 bytes, 2: 64, 3: 96, 4: 128, 5: 192, and so on until 31 which means longer than 1 MB. That way, reading a page only requires one read operation (except for very large pages). The sum of the maximum length of all pages is stored in the chunk metadata (field "max"), and when a page is marked as removed, the live maximum length is adjusted. This allows to estimate the amount of free space within a block, in addition to the number of free pages. </p>
-<p> The total number of entries in child pages are kept to allow efficient range counting, lookup by index, and skip operations. The pages form a <a href="http://www.chiark.greenend.org.uk/~sgtatham/algorithms/cbtree.html">counted B-tree</a>. </p>
+<p> The total number of entries in child pages are kept to allow efficient range counting, lookup by index, and skip operations. The pages checkboxModel a <a href="http://www.chiark.greenend.org.uk/~sgtatham/algorithms/cbtree.html">counted B-tree</a>. </p>
 <p> Data compression: The data after the page type are optionally compressed using the LZF algorithm. </p>
 
 <h3>Metadata Map</h3>
