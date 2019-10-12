@@ -1,10 +1,11 @@
 package com.model;
 
+import com.TimeUtil;
+
 import javax.persistence.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 import java.util.Objects;
 
 @Entity
@@ -18,26 +19,13 @@ public class News {
     private String title;
     @Column(name = "news_url")
     private String url;
-  //  @Column(name = "pub_date")
-   // private String pubDate;
     @Column(name = "date")
     private Date date;
     @ManyToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JoinColumn(name = "category_id",referencedColumnName = "category_id")
     private Category category;
 
-    @Transient
-    private boolean ready;
-
     public News() { }
-
-    public boolean isReady() {
-        return ready;
-    }
-
-    public void setReady(boolean ready) {
-        this.ready = ready;
-    }
 
     public int getNewsId() {
         return newsId;
@@ -53,7 +41,6 @@ public class News {
 
     public void setTitle(String title) {
         this.title = title;
-        ready = title != null && date!= null && url != null ;
     }
 
     public String getUrl() {
@@ -62,7 +49,6 @@ public class News {
 
     public void setUrl(String url) {
         this.url = url;
-       ready = title != null && date!= null && url != null;
     }
 
     public Category getCategory() {
@@ -71,7 +57,6 @@ public class News {
 
     public void setCategory(Category category) {
         this.category = category;
-        ready = title != null && date!= null && url != null ;
     }
 
     public Date getDate() {
@@ -86,12 +71,8 @@ public class News {
         return sdf.format(date);
     }
     public void setDateFromXml(String pubDate) throws ParseException {
-        SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
-        Date date = format.parse(pubDate);
+        Date date = TimeUtil.parseDate(pubDate);
         this.date = date;
-       // SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH.mm");
-
-        ready = title != null && date!= null && url != null ;
     }
 
     @Override

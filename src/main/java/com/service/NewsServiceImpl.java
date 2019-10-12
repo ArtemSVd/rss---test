@@ -3,12 +3,12 @@ package com.service;
 import com.dao.NewsDAO;
 import com.model.News;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Set;
 
-@Repository
+@Service
 public class NewsServiceImpl implements NewsService {
     private final NewsDAO newsDAO;
 

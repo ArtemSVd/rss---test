@@ -1,7 +1,10 @@
 package com.model;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import  javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "category")
@@ -16,7 +19,10 @@ public class Category {
     @Column(name = "url")
     private String url;
     @Column(name = "last_update")
-    private Date lastUpdate;
+    private Date lastUpdate = new Date(0);
+    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval=true)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private Set<News> newsSet;
 
     public Category(String topic, String url) {
         this.topic = topic;
@@ -56,6 +62,14 @@ public class Category {
 
     public void setLastUpdate(Date lastUpdate) {
         this.lastUpdate = lastUpdate;
+    }
+
+    public Set<News> getNewsSet() {
+        return newsSet;
+    }
+
+    public void setNewsSet(Set<News> newsSet) {
+        this.newsSet = newsSet;
     }
 
     @Override

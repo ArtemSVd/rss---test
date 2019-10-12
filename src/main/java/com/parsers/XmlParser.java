@@ -1,5 +1,6 @@
 package com.parsers;
 
+import com.TimeUtil;
 import com.model.Category;
 import com.model.News;
 import javax.xml.stream.XMLEventReader;
@@ -20,58 +21,79 @@ public class XmlParser {
     private final String LINK = "link";
     private final String PUB_DATE = "pubDate";
     private final String ITEM = "item";
+    private final String ENCL_SOURCE = "enclosure";
 
-    public Set<News> getNewsByCategory(Category category,Date currentDate) throws IOException, XMLStreamException, ParseException {
-        URL url = new URL(category.getUrl());
-        category.setLastUpdate(currentDate);
+
+    public Set<News> getNewsByCategory(Category category) throws IOException, XMLStreamException, ParseException {
         Set<News> set = new HashSet<>();
-        XMLInputFactory inputFactory = XMLInputFactory.newInstance();
 
-        InputStream in = url.openStream();
-        XMLEventReader eventReader = inputFactory.createXMLEventReader(in);
+        Date lastUpdate = category.getLastUpdate();
 
-        String localPart = "";
-        XMLEvent event;
-
-        while (!ITEM.equals(localPart) && eventReader.hasNext() ) {
-            event = eventReader.nextEvent();
-            localPart = event.isStartElement() ? event.asStartElement().getName().getLocalPart() : null;
-        }
+        XMLEventReader eventReader = getEventReader(category);
 
         News news = new News();
-        while (eventReader.hasNext()) {
+        skipToNextItem(eventReader);
+        while(eventReader.hasNext()){
             news.setCategory(category);
-            event = eventReader.nextEvent();
-            if (event.isStartElement()) {
-                localPart = event.asStartElement().getName().getLocalPart();
-
-                switch (localPart) {
+            XMLEvent event = eventReader.nextEvent();
+            if(event.isStartElement()){
+                String localPart = event.asStartElement().getName().getLocalPart();
+                switch (localPart){
                     case TITLE:
-                        news.setTitle(getCharacterData(event, eventReader));
+                        news.setTitle(getCharacterData(eventReader));
                         break;
                     case LINK:
-                        news.setUrl(getCharacterData(event, eventReader));
+                        news.setUrl(getCharacterData(eventReader));
                         break;
                     case PUB_DATE:
-                        news.setDateFromXml(getCharacterData(event, eventReader));
+                        String pubDate = getCharacterData(eventReader);
+                        Date newsDate = TimeUtil.parseDate(pubDate);
+                        if(newsDate.after(lastUpdate)) {
+                            news.setDateFromXml(pubDate);
+                        }
+                        else{
+                            skipToNextItem(eventReader);
+                            news = new News();
+                        }
                         break;
-                    case ITEM:
-                        news = new News();
+                    case ENCL_SOURCE:
+                        //
                         break;
                 }
             }
-            if (news.isReady())
-                set.add(news);
+            if(event.isEndElement()){
+                String localPart = event.asEndElement().getName().getLocalPart();
+                if(ITEM.equals(localPart)){
+                    set.add(news);
+                    news = new News();
+                }
+            }
         }
-        return  set;
+        return set;
     }
-    private  String getCharacterData(XMLEvent event, XMLEventReader eventReader)
+    private  String getCharacterData(XMLEventReader eventReader)
             throws XMLStreamException {
         String result = "";
-        event = eventReader.nextEvent();
+        XMLEvent event = eventReader.nextEvent();
         if (event instanceof Characters) {
             result = event.asCharacters().getData();
         }
         return result;
     }
+    private void skipToNextItem(XMLEventReader eventReader) throws XMLStreamException {
+        while(eventReader.hasNext()){
+            XMLEvent event = eventReader.nextEvent();
+            if(event.isStartElement()){
+                String localPart = event.asStartElement().getName().getLocalPart();
+                if(ITEM.equals(localPart)) break;
+            }
+        }
+    }
+    private XMLEventReader getEventReader(Category category) throws IOException, XMLStreamException {
+        URL url = new URL(category.getUrl());
+        XMLInputFactory inputFactory = XMLInputFactory.newInstance();
+        InputStream in = url.openStream();
+        return inputFactory.createXMLEventReader(in);
+    }
+
 }

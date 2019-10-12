@@ -3,11 +3,13 @@ package com.service;
 import com.dao.CategoryDAO;
 import com.model.Category;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
-@Repository(value = "categoryService")
+@Service
+@Transactional
 public class CategoryServiceImpl implements CategoryService {
 
     private final CategoryDAO categoryDAO;
@@ -38,7 +40,8 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void delete(Category category) {
-        categoryDAO.deleteCategory(category);
+    public void delete(int id) {
+        categoryDAO.deleteCategory(id);
+        System.out.println("удалил");
     }
 }
