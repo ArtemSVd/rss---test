@@ -6,59 +6,31 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c5f344de-ee60-4a03-bc26-adfc4f4ea93b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.attach_pid6111" beforeDir="false" />
+    <list default="true" id="27c9cbea-b0f9-4739-8039-c4e8d9a05989" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_11_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newsLink" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/TimeDiff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/TimeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ToDo" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rss-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rss-test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/config/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/config/AppInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dao/CategoryDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/model/News.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/model/News.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/parsers/XmlParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/parsers/XmlParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/CategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/CategoryServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/service/NewsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/service/NewsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/editRSSpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/editRSSpage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/news.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/TimeDiff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/navbar.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/config/AppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/config/AppInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/config/WebConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/CategoryController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/NewsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/CategoryDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dao/CategoryDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dao/CategoryDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/dao/CategoryDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/model/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/model/News.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/model/News.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/parsers/XmlParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/parsers/XmlParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/CategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/service/NewsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/service/NewsServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/TimeDiff.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/config/AppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/config/AppInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/config/WebConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/controller/CategoryController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/controller/NewsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/dao/CategoryDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/dao/CategoryDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/dao/CategoryDAOImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/dao/CategoryDAOImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/model/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/model/Category.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/model/News.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/model/News.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/parsers/XmlParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/parsers/XmlParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/service/CategoryService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/service/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/service/CategoryServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/service/NewsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/service/NewsServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/pages/css.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/pages/editRSSpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/pages/editRSSpage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/pages/news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/pages/news.jsp" afterDir="false" />
     </list>
@@ -79,50 +51,13 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test" type="feb32156:DbDataSourceImpl" />
-        <item name="TEST: database" type="2aa06773:H2ImplModel$Database" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test" type="feb32156:DbDataSourceImpl" />
-        <item name="TEST: database" type="2aa06773:H2ImplModel$Database" />
-        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test" type="feb32156:DbDataSourceImpl" />
-        <item name="TEST: database" type="2aa06773:H2ImplModel$Database" />
-        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
-        <item name="CATEGORY: table" type="818c1b4a:H2ImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="test" type="feb32156:DbDataSourceImpl" />
-        <item name="TEST: database" type="2aa06773:H2ImplModel$Database" />
-        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
-        <item name="NEWS: table" type="818c1b4a:H2ImplModel$Table" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="module-info" />
-        <option value="FxmlFile" />
-        <option value="jsf" />
-        <option value="Jsp File" />
-        <option value="CSS File" />
-        <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -130,7 +65,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/editRSSpage.jsp" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/aggregator/model/Category.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -139,40 +74,25 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="1RbZ0P1Kre9i6iLTgufVFK50iot" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="1S9skt6TIfl2Q07ZK63lZnO7361" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="h2" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="JPA.DatabaseSchemaImportDialog" value="e2f3c7b2-7650-40c0-8e6c-615c4670fa45" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.35287356" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="gui.model" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-      <recent name="C:\Users\Артем1\IdeaProjects\rss-test\src\main\resources" />
-      <recent name="C:\Users\Артем1\IdeaProjects\rss-test\src\main\java\gui" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -187,20 +107,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.46">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.App" />
-      <module name="rss-test" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Gui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="gui.qwerty.Gui" />
+  <component name="RunManager" selected="Maven.rss-test [spring-boot:run]">
+    <configuration name="Parse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.aggregator.Parse" />
       <module name="rss-test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="gui.qwerty.*" />
+          <option name="PATTERN" value="com.aggregator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -208,8 +121,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="rss-test [spring-boot:run]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2">
+        <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean" />
+      </method>
+    </configuration>
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="rss-test" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.aggregator.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 8.5.46" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.46" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/edit" />
+      <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="rss-test:war">
@@ -219,15 +166,15 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_rss---test_3" />
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_26_rss-test_2" />
       </server-settings>
+      <log_file checked="false" alias="Tomcat Catalina Log" path="%IDEA_RUN:CATALINA_BASE%/logs/catalina.*" />
       <predefined_log_file enabled="true" id="Tomcat" />
-      <predefined_log_file enabled="true" id="Tomcat Catalina" />
       <predefined_log_file id="Tomcat Manager" />
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="27386" />
+        <option name="DEBUG_PORT" value="41293" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -281,13 +228,109 @@
         </option>
       </method>
     </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.26" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER" value="false" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_rss-test" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="41293" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <name>CONTEXT_XML</name>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <name>STAGING</name>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" />
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="35811" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.App" />
+      <item itemvalue="Maven.rss-test [spring-boot:run]" />
+      <item itemvalue="Spring Boot.App" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.46" />
+      <item itemvalue="Application.Parse" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Parse" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +338,12 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1ec1920f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -306,24 +354,27 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c5f344de-ee60-4a03-bc26-adfc4f4ea93b" name="Default Changelist" comment="" />
-      <created>1569937531507</created>
+      <changelist id="27c9cbea-b0f9-4739-8039-c4e8d9a05989" name="Default Changelist" comment="" />
+      <created>1570987301274</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1569937531507</updated>
-      <workItem from="1569937535858" duration="5230000" />
-      <workItem from="1569946195851" duration="5259000" />
-      <workItem from="1569953291678" duration="16956000" />
-      <workItem from="1570198728267" duration="214000" />
-      <workItem from="1570199095331" duration="28155000" />
-      <workItem from="1570375525742" duration="20198000" />
-      <workItem from="1570433898930" duration="14294000" />
-      <workItem from="1570547366898" duration="7110000" />
-      <workItem from="1570555124164" duration="12280000" />
-      <workItem from="1570613115137" duration="376000" />
-      <workItem from="1570639187476" duration="12820000" />
-      <workItem from="1570710544031" duration="9160000" />
-      <workItem from="1570777716420" duration="36267000" />
+      <updated>1570987301274</updated>
+      <workItem from="1570987337955" duration="616000" />
+      <workItem from="1570988855976" duration="13947000" />
+      <workItem from="1571031478398" duration="4918000" />
+      <workItem from="1571036980300" duration="4306000" />
+      <workItem from="1571068956958" duration="587000" />
+      <workItem from="1571070296167" duration="14112000" />
+      <workItem from="1571126695272" duration="3213000" />
+      <workItem from="1571134238725" duration="496000" />
+      <workItem from="1571297509367" duration="13590000" />
+      <workItem from="1571327729723" duration="9700000" />
+      <workItem from="1571375869169" duration="5013000" />
+      <workItem from="1571388983334" duration="282000" />
+      <workItem from="1571408101236" duration="4777000" />
+      <workItem from="1571416652886" duration="506000" />
+      <workItem from="1571418010369" duration="6019000" />
+      <workItem from="1571425180925" duration="2168000" />
     </task>
     <servers />
   </component>
@@ -347,17 +398,11 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/qwerty/Main.java</url>
-          <line>61</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/aggregator/service/NewsServiceImpl.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="newsDate" />
-        <watch expression="lastUpdate" language="JAVA" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

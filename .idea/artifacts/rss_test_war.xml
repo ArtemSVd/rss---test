@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="rss-test-1.0-SNAPSHOT.war">
+    <root id="archive" name="newsAggregator.war">
       <element id="artifact" artifact-name="rss-test:war exploded" />
     </root>
   </artifact>
