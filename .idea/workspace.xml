@@ -8,15 +8,14 @@
   <component name="ChangeListManager">
     <list default="true" id="27c9cbea-b0f9-4739-8039-c4e8d9a05989" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rss-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rss-test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aggregator/config/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aggregator/config/AppInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aggregator/config/MvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aggregator/config/MvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aggregator/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aggregator/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aggregator/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aggregator/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test.lock.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.lock.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.mv.db" afterDir="false" />
     </list>
@@ -83,15 +82,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Артем1\IdeaProjects\rss---test\src\main\resources\templates" />
       <recent name="C:\Users\Артем1\IdeaProjects\rss---test\src\main\webapp\WEB-INF\pages" />
       <recent name="C:\Users\Артем1\IdeaProjects\rss---test\src\main\webapp\WEB-INF\templates" />
       <recent name="C:\Users\Артем1\IdeaProjects\rss---test\src\main\resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -390,6 +389,7 @@
       <workItem from="1571472563103" duration="17653000" />
       <workItem from="1571512137663" duration="4253000" />
       <workItem from="1571559239095" duration="3755000" />
+      <workItem from="1571563734536" duration="3285000" />
     </task>
     <servers />
   </component>

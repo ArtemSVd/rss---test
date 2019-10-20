@@ -18,7 +18,7 @@
 
 <div>
 ${message}
-    <form:form  action="/registration" method="post" modelAttribute="user">
+    <form:form  action="/register" method="post" modelAttribute="user">
         <div>
             <form:label path="login">Логин : <input type="text" name="login"/> </form:label>
         </div>

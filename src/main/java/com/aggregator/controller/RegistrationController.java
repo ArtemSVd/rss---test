@@ -5,25 +5,24 @@ import com.aggregator.model.User;
 import com.aggregator.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.Collections;
 
 @Controller
-public class Registration {
+@SessionAttributes("user")
+public class RegistrationController {
     private UserService userService;
 
     @Autowired
-    public Registration(UserService userService) {
+    public RegistrationController(UserService userService) {
         this.userService = userService;
     }
 
 
     @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public ModelAndView registrtion(){
+    public ModelAndView registration(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("user", new User());
         modelAndView.setViewName("registration");
@@ -31,7 +30,7 @@ public class Registration {
     }
     @RequestMapping(name = "/register", method = RequestMethod.POST)
     public ModelAndView addUser(@ModelAttribute("user") User user){
-        User userFromDb = userService.getByLogin(user.getLogin());
+        User userFromDb = userService.getByLogin(user.getUsername());
 
         ModelAndView modelAndView = new ModelAndView();
 
@@ -40,7 +39,7 @@ public class Registration {
             modelAndView.setViewName("registration");
             return modelAndView;
         }
-
+        modelAndView.addObject("user",user);
         user.setRoles(Collections.singleton(Role.USER));
         userService.add(user);
 
