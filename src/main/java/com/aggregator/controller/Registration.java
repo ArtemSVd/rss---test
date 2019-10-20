@@ -21,14 +21,15 @@ public class Registration {
         this.userService = userService;
     }
 
-    @RequestMapping(name = "/registration",method = RequestMethod.GET)
-    public ModelAndView registration(){
+
+    @RequestMapping(value = "/register", method = RequestMethod.GET)
+    public ModelAndView registrtion(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("user", new User());
         modelAndView.setViewName("registration");
         return modelAndView;
     }
-    @RequestMapping(name = "/registration", method = RequestMethod.POST)
+    @RequestMapping(name = "/register", method = RequestMethod.POST)
     public ModelAndView addUser(@ModelAttribute("user") User user){
         User userFromDb = userService.getByLogin(user.getLogin());
 

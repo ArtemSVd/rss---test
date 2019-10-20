@@ -28,7 +28,7 @@ public class NewsController {
         return new User();
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "/news", method = RequestMethod.GET)
     public final ModelAndView allNews(
             @ModelAttribute(name = "user") final User user) {
 

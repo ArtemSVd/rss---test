@@ -23,7 +23,7 @@
 
 
 <div class="container mt-5">
-    <div row>
+    <div class="row">
         <a class="btn btn-link" href="/prev ">Предыдущая страница </a>
         <a class="btn btn-link" href="/next ">Следующая страница</a>
     </div>

@@ -1,6 +1,6 @@
 #FileLock
-#Sun Oct 20 01:22:05 YEKT 2019
-server=127.0.1.1\:35237
-hostName=artem-Aspire-ES1-311
+#Sun Oct 20 14:20:05 YEKT 2019
+server=192.168.0.5\:47518
+hostName=192.168.0.5
 method=file
-id=16de5af23ab894fced27c932e2aaa34057664b4bac0
+id=16de8776a47bd6085bec42a61812e288d061658f4db

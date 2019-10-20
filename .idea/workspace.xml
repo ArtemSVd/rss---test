@@ -7,32 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="27c9cbea-b0f9-4739-8039-c4e8d9a05989" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javafx_sdk_11_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ToDo" beforeDir="false" afterPath="$PROJECT_DIR$/ToDo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rss-test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/rss-test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/config/AppInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/config/AppInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/CategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/NewsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/editRSSpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/editRSSpage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aggregator/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aggregator/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/NewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/NewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aggregator/controller/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/registration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/navbar.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/navbar.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/config/AppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/config/AppInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/CategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/controller/NewsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/config/AppInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/config/AppInit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/controller/CategoryController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/controller/NewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/classes/com/controller/NewsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/pages/editRSSpage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/pages/editRSSpage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/pages/news.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/rss-test-1.0-SNAPSHOT/WEB-INF/pages/news.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.lock.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.lock.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/test.mv.db" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -62,8 +48,8 @@
       <list>
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -97,15 +83,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/images" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Артем1\IdeaProjects\rss---test\src\main\webapp\WEB-INF\pages" />
+      <recent name="C:\Users\Артем1\IdeaProjects\rss---test\src\main\webapp\WEB-INF\templates" />
+      <recent name="C:\Users\Артем1\IdeaProjects\rss---test\src\main\resources" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -403,6 +389,7 @@
       <workItem from="1571425180925" duration="4168000" />
       <workItem from="1571472563103" duration="17653000" />
       <workItem from="1571512137663" duration="4253000" />
+      <workItem from="1571559239095" duration="3755000" />
     </task>
     <servers />
   </component>
@@ -427,8 +414,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/aggregator/service/NewsService.java</url>
-          <line>14</line>
-          <properties class="com.aggregator.service.NewsService" method="getSortedNewsBySelectedCategories">
+          <line>15</line>
+          <properties class="com.aggregator.service.NewsService" method="getSortedNewsByAllCategories">
             <option name="EMULATED" value="true" />
           </properties>
           <option name="timeStamp" value="17" />

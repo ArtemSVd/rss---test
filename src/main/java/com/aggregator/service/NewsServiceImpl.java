@@ -97,11 +97,12 @@ public class NewsServiceImpl implements NewsService {
     public int lastPaginatedNews(Set<Category> selectedCategories){
         Set<Long> idSelectedCategories = new HashSet<>();
 
-        for(Category category : selectedCategories){
-            idSelectedCategories.add(category.getId());
+        if(selectedCategories != null) {
+            for (Category category : selectedCategories) {
+                idSelectedCategories.add(category.getId());
+            }
         }
-
-        if(selectedCategories == null){
+        else {
             idSelectedCategories = categoryService.getIdForAllCategories();
         }
 
