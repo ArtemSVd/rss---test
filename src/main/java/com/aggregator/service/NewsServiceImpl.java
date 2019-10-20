@@ -8,6 +8,7 @@ import com.aggregator.util.TimeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -18,6 +19,7 @@ public class NewsServiceImpl implements NewsService {
     private final NewsDAO newsDAO;
     private final CategoryServiceImpl categoryService;
     private final XmlParser xmlParser;
+
     @Autowired
     public NewsServiceImpl(NewsDAO newsDAO, CategoryServiceImpl categoryService, XmlParser xmlParser) {
         this.newsDAO = newsDAO;
@@ -53,13 +55,17 @@ public class NewsServiceImpl implements NewsService {
     }
 
     @Override
-    public List<News> getSortedNewsBySelectedCategories(Set<Long> selectedCategories, int page) {
+    public List<News> getSortedNewsBySelectedCategories(Set<Category> selectedCategories, int page) {
         Date currentDate = new Date();
-        for (long i : selectedCategories) {
-            Category category = categoryService.getById(i);
+
+        Set<Long> idSelectedCategories = new HashSet<>();
+        for (Category category : selectedCategories) {
             loadAndSaveNews(category,currentDate);
+
+            idSelectedCategories.add(category.getId());
         }
-        return newsDAO.getSortedNewsBySelectedCategories(selectedCategories, page);
+
+        return newsDAO.getSortedNewsBySelectedCategories(idSelectedCategories, page);
     }
 
     @Override
@@ -70,6 +76,7 @@ public class NewsServiceImpl implements NewsService {
         }
         return newsDAO.getSortedNewsByAllCategories(page);
     }
+
     private void loadAndSaveNews(Category category, Date currentDate){
         Date lastUpdate = category.getLastUpdate();
         long minutesDiff = TimeUtil.getDateDiff(lastUpdate, currentDate, TimeUnit.MINUTES);
@@ -86,10 +93,18 @@ public class NewsServiceImpl implements NewsService {
             }
         }
     }
-    public int lastPaginatedNews(Set<Long> selectedCategories){
-        if(selectedCategories == null){
-            selectedCategories = categoryService.getIdForAllCategories();
+
+    public int lastPaginatedNews(Set<Category> selectedCategories){
+        Set<Long> idSelectedCategories = new HashSet<>();
+
+        for(Category category : selectedCategories){
+            idSelectedCategories.add(category.getId());
         }
-        return newsDAO.lastPaginatedNews(selectedCategories);
+
+        if(selectedCategories == null){
+            idSelectedCategories = categoryService.getIdForAllCategories();
+        }
+
+        return newsDAO.lastPaginatedNews(idSelectedCategories);
     }
 }

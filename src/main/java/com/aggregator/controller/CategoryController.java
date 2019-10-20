@@ -71,8 +71,8 @@ public class CategoryController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/category");
 
-        for(long i : userFromPost.getSelectedCategories())
-            service.delete(i);
+//        for(long i : userFromPost.getSelectedCategories())
+//            service.delete(i);
 
         modelAndView.addObject("user", new User());
 

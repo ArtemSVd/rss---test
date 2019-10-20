@@ -54,10 +54,16 @@
     <expand />
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="rss-test" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -74,6 +80,13 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1S9skt6TIfl2Q07ZK63lZnO7361" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
@@ -84,14 +97,14 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
       <recent name="$PROJECT_DIR$/src/main/webapp/images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages" />
     </key>
   </component>
@@ -110,6 +123,19 @@
   <component name="RunManager" selected="Maven.rss-test [spring-boot:run]">
     <configuration name="Parse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.aggregator.Parse" />
+      <module name="rss-test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.aggregator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.aggregator.UserTest" />
       <module name="rss-test" />
       <extension name="coverage">
         <pattern>
@@ -223,9 +249,7 @@
       </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="rss-test:war" />
-        </option>
+        <option name="BuildArtifacts" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.26" ALTERNATIVE_JRE_ENABLED="false">
@@ -323,13 +347,15 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Parse" />
+      <item itemvalue="Application.UserTest" />
       <item itemvalue="Maven.rss-test [spring-boot:run]" />
       <item itemvalue="Spring Boot.App" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.46" />
-      <item itemvalue="Application.Parse" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UserTest" />
         <item itemvalue="Application.Parse" />
       </list>
     </recent_temporary>
@@ -374,7 +400,9 @@
       <workItem from="1571408101236" duration="4777000" />
       <workItem from="1571416652886" duration="506000" />
       <workItem from="1571418010369" duration="6019000" />
-      <workItem from="1571425180925" duration="2168000" />
+      <workItem from="1571425180925" duration="4168000" />
+      <workItem from="1571472563103" duration="17653000" />
+      <workItem from="1571512137663" duration="4253000" />
     </task>
     <servers />
   </component>
@@ -397,10 +425,13 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aggregator/service/NewsServiceImpl.java</url>
-          <line>89</line>
-          <option name="timeStamp" value="4" />
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/aggregator/service/NewsService.java</url>
+          <line>14</line>
+          <properties class="com.aggregator.service.NewsService" method="getSortedNewsBySelectedCategories">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="17" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

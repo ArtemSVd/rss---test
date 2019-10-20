@@ -1,5 +1,6 @@
 package com.aggregator.dao;
 
+import com.aggregator.model.Category;
 import com.aggregator.model.News;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -10,6 +11,8 @@ import org.hibernate.criterion.Restrictions;
 import org.hibernate.transform.Transformers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -67,6 +70,7 @@ public class NewsDAOImpl implements NewsDAO {
     @Override
     public List<News> getSortedNewsBySelectedCategories(Set<Long> selectedCategories, int page) {
         try (Session session = sessionFactory.openSession()) {
+
 
             @SuppressWarnings("unchecked")
             List<News> newsList = session.createCriteria(News.class)

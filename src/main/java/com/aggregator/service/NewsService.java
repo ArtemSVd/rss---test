@@ -1,5 +1,6 @@
 package com.aggregator.service;
 
+import com.aggregator.model.Category;
 import com.aggregator.model.News;
 
 import java.util.List;
@@ -11,6 +12,6 @@ public interface NewsService {
     News getById(int newsId);
     List<News> all();
     void delete(News news);
-    List<News> getSortedNewsBySelectedCategories(Set<Long> selectedCategories, int page) ;
+    List<News> getSortedNewsBySelectedCategories(Set<Category> selectedCategories, int page) ;
     List<News> getSortedNewsByAllCategories(int page) ;
 }

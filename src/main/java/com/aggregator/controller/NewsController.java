@@ -1,5 +1,6 @@
 package com.aggregator.controller;
 
+import com.aggregator.model.Category;
 import com.aggregator.model.News;
 import com.aggregator.model.User;
 import com.aggregator.service.NewsServiceImpl;
@@ -27,7 +28,7 @@ public class NewsController {
         return new User();
     }
 
-    @RequestMapping(value = "/news", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public final ModelAndView allNews(
             @ModelAttribute(name = "user") final User user) {
 
@@ -36,7 +37,7 @@ public class NewsController {
 
         List<News> newsList;
 
-        Set<Long> selectedCategories = user.getSelectedCategories();
+        Set<Category> selectedCategories = user.getSelectedCategories();
         if (selectedCategories.size() != 0) {
             newsList = newsService.
                     getSortedNewsBySelectedCategories(selectedCategories, page);
@@ -49,6 +50,7 @@ public class NewsController {
         modelAndView.addObject("newsList", newsList);
         return modelAndView;
     }
+
     @RequestMapping(value = "/reset", method = RequestMethod.GET)
     public final ModelAndView resetPageCount(){
         page = 0;

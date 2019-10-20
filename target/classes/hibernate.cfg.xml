@@ -23,11 +23,11 @@
         <property name="hibernate.connection.useUnicode">true</property>
 
 
-        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="hibernate.hbm2ddl.auto">create</property>
 
         <mapping class="com.aggregator.model.Category" />
         <mapping class="com.aggregator.model.News"/>
-<!--        <mapping class="com.aggregator.model.User"/>-->
+        <mapping class="com.aggregator.model.User"/>
 
     </session-factory>
 </hibernate-configuration>

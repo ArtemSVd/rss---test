@@ -1,5 +1,6 @@
 package com.aggregator.dao;
 
+import com.aggregator.model.Category;
 import com.aggregator.model.News;
 
 import java.util.List;
@@ -13,5 +14,6 @@ public interface NewsDAO {
     void deleteNews(News news);
     List<News> getSortedNewsBySelectedCategories(Set<Long> selectedCategories, int page);
     List<News> getSortedNewsByAllCategories(int page);
-    public int lastPaginatedNews(Set<Long> selectedCategories);
+    int lastPaginatedNews(Set<Long> selectedCategories);
+
 }

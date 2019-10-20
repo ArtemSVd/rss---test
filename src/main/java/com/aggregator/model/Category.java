@@ -24,6 +24,11 @@ public class Category {
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval=true)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private Set<News> newsSet;
+    @ManyToMany
+    @JoinTable(name="users_category",
+            joinColumns = @JoinColumn(name="category_id"),
+            inverseJoinColumns = @JoinColumn(name="user_id"))
+    private Set<User> users;
 
     public Category(String topic, String url) {
         this.topic = topic;
