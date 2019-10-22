@@ -6,19 +6,56 @@ import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
-public class TimeUtil {
+/**
+ * Служебный класс предназначен для работы с датами.
+ */
+public final class TimeUtil {
 
-    public static long getDateDiff(Date date1, Date date2, TimeUnit timeUnit) {
-        long diffInMilliSeconds = date2.getTime() - date1.getTime();
-        return timeUnit.convert(diffInMilliSeconds,TimeUnit.MILLISECONDS);
+    /**
+     * Служебный класс, все методы статические.
+     */
+    private TimeUtil() {
     }
-    public static Date parseDate(String pubDate) throws ParseException {
-        SimpleDateFormat format = new SimpleDateFormat("dd MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
-        SimpleDateFormat format1 = new SimpleDateFormat("E, dd MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
+
+    /**
+     * Метод необходим для подсчета разницы времени между двумя датами.
+     * @param dateBefore дата предшествующая дате из второго аргумента
+     * @param dateNow текущая дата
+     * @param timeUnit параметр указывает в каких единицах
+     *                 следует возвращать разницу между датами
+     * @return возвращает разницу между датами
+     * в зависимости от timeUnit
+     */
+    public static long getDateDiff(
+            final Date dateBefore,
+            final Date dateNow,
+            final TimeUnit timeUnit) {
+
+        long diffInMilliSeconds = dateNow.getTime() - dateBefore.getTime();
+        return timeUnit.convert(diffInMilliSeconds, TimeUnit.MILLISECONDS);
+    }
+
+    /**
+     * Метод для конвертации строки из RSS - лент, содержащей дату
+     * конвертация происходит из двух наиболее распространенных форматов.
+     * @param pubDate строка, содержащая дату
+     * @return возвращает объект Date
+     * @throws ParseException исключение связано с ошибкой конвертации,
+     * выбрасывается, если формат даты из строки не соответствует заданным
+     */
+    public static Date parseDate(final String pubDate) throws ParseException {
+
+        SimpleDateFormat firstFormat =
+                new SimpleDateFormat(
+                        "dd MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
+        SimpleDateFormat secondFormat =
+                new SimpleDateFormat(
+                        "E, dd MMM yyyy HH:mm:ss Z", Locale.ENGLISH);
+
         try {
-            return format.parse(pubDate);
+            return firstFormat.parse(pubDate);
         } catch (ParseException e) {
-            return format1.parse(pubDate);
+            return secondFormat.parse(pubDate);
         }
     }
 }

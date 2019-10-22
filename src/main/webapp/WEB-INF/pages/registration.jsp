@@ -16,19 +16,21 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <jsp:include page="../templates/navbar.jsp"/>
 
-<div>
-${message}
-    <form:form  action="/register" method="post" modelAttribute="user">
-        <div>
-            <form:label path="login">Логин : <input type="text" name="login"/> </form:label>
-        </div>
-        <div>
-            <form:label path="password"> Пароль : <input type="password" name="password" /></form:label>
-        </div>
-        <div>
-            <input type="submit" value="Зарегистрироваться">
-        </div>
-    </form:form>
+<div class="container mt-5 pt-5">
+    <div class="row text-danger justify-content-center align-self-center">${message}</div>
+    <div class="row justify-content-center align-items-center">
+        <form:form  action="/register" method="post" modelAttribute="user">
+            <div class="form-group">
+                <form:label for="username" path="username">Логин</form:label>
+                <input type="text" class="form-control" name="username" id="username"/>
+            </div>
+            <div class="form-group">
+                <form:label for="password" path="password"> Пароль</form:label>
+                <input  class="form-control" type="password" name="password" id="password" />
+            </div>
+            <input type="submit" class="btn btn-primary active btn-block" value="Зарегистрироваться">
+        </form:form>
+    </div>
 </div>
 </body>
 </html>

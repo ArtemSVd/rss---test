@@ -1,17 +1,25 @@
 package com.aggregator.controller;
 
 import com.aggregator.model.Category;
+import com.aggregator.model.Selector;
 import com.aggregator.model.User;
 import com.aggregator.parsers.XmlParser;
 import com.aggregator.service.CategoryServiceImpl;
+import com.aggregator.service.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
+
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Controller
-@SessionAttributes("user")
+@SessionAttributes("selector")
 public class CategoryController {
     private CategoryServiceImpl service;
 
@@ -27,29 +35,73 @@ public class CategoryController {
         this.parser = parser;
     }
 
-    @ModelAttribute("user")
-    public User initUser(){
-        return new User();
+   private UserServiceImpl userService;
+
+    @Autowired
+    public void setUserService(UserServiceImpl userService) {
+        this.userService = userService;
+    }
+
+    @ModelAttribute("selector")
+    public Selector initSelector(){
+        return new Selector();
+    }
+
+
+    @RequestMapping(value = "/currentUser", method = RequestMethod.POST)
+    public ModelAndView getCurrentUser() {
+        User authorizedUser = userService.getAuthorizedUser();
+
+        ModelAndView modelAndView = new ModelAndView();
+
+        Set<Long> idSelectedCategories = new HashSet<>();
+        for(Category category : authorizedUser.getSelectedCategories()) {
+            idSelectedCategories.add(category.getId());
+        }
+
+        modelAndView.addObject("selector", new Selector(idSelectedCategories));
+        modelAndView.setViewName("redirect:/category");
+
+        return modelAndView;
     }
 
     @RequestMapping(value = "/category", method = RequestMethod.GET)
-    public ModelAndView allCategory() {
+    public ModelAndView allCategory(@ModelAttribute("selector") Selector selector) {
         ModelAndView modelAndView = new ModelAndView();
+
+        if(userService.getAuthorizedUser() == null) {
+            modelAndView.addObject("anon", true);
+        } else {
+            modelAndView.addObject("username", userService.getAuthorizedUser().getUsername());
+        }
+
+
+
         modelAndView.setViewName("category");
 
         List<Category> categories = service.all();
         modelAndView.addObject("categories", categories);
-       // modelAndView.addObject("userInPost", new User());
+        modelAndView.addObject("selector", selector);
         modelAndView.addObject("category", new Category());
 
         return modelAndView;
     }
     @RequestMapping(value = "/category", method = RequestMethod.POST)
-    public ModelAndView selectCategories( @ModelAttribute("user") final User user) {
+    public ModelAndView selectCategories( @ModelAttribute("selector") final Selector selector) {
        ModelAndView modelAndView = new ModelAndView();
 
-       modelAndView.addObject("user",user);
+       modelAndView.addObject("selector", selector);
 
+       User user = userService.getAuthorizedUser();
+        if(user != null) {
+            user.getSelectedCategories().clear();
+
+            for (long id : selector.getSelectedCategories()) {
+                user.getSelectedCategories().add(service.getById(id));
+            }
+
+            userService.update(user);
+        }
        modelAndView.setViewName("redirect:news");
        return modelAndView;
     }
@@ -67,14 +119,14 @@ public class CategoryController {
     }
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     public ModelAndView deleteCategory(
-            @ModelAttribute("user") final User userFromPost) {
+            @ModelAttribute("selector") final Selector selector) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:/category");
 
-//        for(long i : userFromPost.getSelectedCategories())
-//            service.delete(i);
+        for(long catId : selector.getSelectedCategories())
+            service.delete(catId);
 
-        modelAndView.addObject("user", new User());
+        modelAndView.addObject("selector", new Selector());
 
         return  modelAndView;
     }

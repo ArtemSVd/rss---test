@@ -1,7 +1,7 @@
 package com.aggregator.dao;
 
 import com.aggregator.model.Category;
-import com.aggregator.util.HibernateUtils;
+import com.aggregator.model.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -15,10 +15,12 @@ import java.util.Set;
 @Repository
 public class CategoryDAOImpl implements CategoryDAO {
     private final SessionFactory sessionFactory;
+    private final UserDAO userDAO;
 
     @Autowired
-    public CategoryDAOImpl(SessionFactory sessionFactory) {
+    public CategoryDAOImpl(SessionFactory sessionFactory, UserDAO userDAO) {
         this.sessionFactory = sessionFactory;
+        this.userDAO = userDAO;
     }
 
     @Override
@@ -55,11 +57,20 @@ public class CategoryDAOImpl implements CategoryDAO {
 
     @Override
     public void deleteCategory(long id)   {
-        try(Session session = HibernateUtils.getSessionFactory().openSession()){
+        try(Session session = sessionFactory.openSession()){
             Transaction transaction = session.beginTransaction();
 
-            Category category = session.get(Category.class, id);
+            Category category = getCategoryById(id);
+
+            for(User user : userDAO.getAllUsers()) {
+                if(user.getSelectedCategories().contains(category)) {
+                    user.getSelectedCategories().remove(category);
+                    userDAO.updateUser(user);
+                }
+            }
+
             category.setNewsSet(null);
+            category.setUsers(null);
             category = (Category) session.merge(category);
             session.delete(category);
 
@@ -69,12 +80,13 @@ public class CategoryDAOImpl implements CategoryDAO {
 
     @Override
     public Set<Long> getIdForAllCategories() {
-        Set<Long> allID = new HashSet<>();
+        Set<Long> idAllCategories = new HashSet<>();
         try(Session session = sessionFactory.openSession()){
-            List id = session.createQuery("SELECT id from Category").list();
-            allID.addAll(id);
+            @SuppressWarnings("unchecked")
+            List<Long> id = session.createQuery("SELECT id from Category").list();
+            idAllCategories.addAll(id);
         }
-        return allID;
+        return idAllCategories;
     }
 
 }

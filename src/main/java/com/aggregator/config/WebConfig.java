@@ -8,10 +8,18 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+/**
+ * Конфигурационный класс предназначен для настройки SpringMVC.
+ */
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "com.aggregator")
 public class WebConfig implements WebMvcConfigurer {
+    /**
+     * Метод задает пути для поиска представлений и их формат.
+     * @return объект, определяющий какое представление необходимо отобразить
+     * для определенного запроса
+     */
     @Bean
     public ViewResolver viewResolver() {
         InternalResourceViewResolver viewResolver
@@ -20,4 +28,5 @@ public class WebConfig implements WebMvcConfigurer {
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
+
 }

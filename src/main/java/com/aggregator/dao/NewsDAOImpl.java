@@ -1,6 +1,5 @@
 package com.aggregator.dao;
 
-import com.aggregator.model.Category;
 import com.aggregator.model.News;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -12,7 +11,6 @@ import org.hibernate.transform.Transformers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -40,23 +38,6 @@ public class NewsDAOImpl implements NewsDAO {
             Transaction transaction = session.beginTransaction();
             session.update(news);
             transaction.commit();
-        }
-    }
-
-    @Override
-    public News getNewsyById(int newsId) {
-        try (Session session = sessionFactory.openSession()) {
-            return (News) session.createQuery("from News WHERE category=" + newsId)
-                    .getSingleResult();
-        }
-    }
-
-    @Override
-    public List<News> getAllNews() {
-        try (Session session = sessionFactory.openSession()) {
-            @SuppressWarnings("unchecked")
-            List<News> news = session.createQuery("from News ").list();
-            return news;
         }
     }
 
@@ -126,7 +107,7 @@ public class NewsDAOImpl implements NewsDAO {
                     .addOrder(Order.desc("date"))
                     .list();
 
-            return (int) Math.ceil(newsList.size()/PAGE_SIZE);
+            return (int) Math.ceil(1.0*newsList.size()/PAGE_SIZE);
         }
     }
 }

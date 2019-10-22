@@ -77,6 +77,14 @@ public class XmlParser {
         }
         return set;
     }
+    public boolean isCorrectRss(Category category){
+        try {
+            getNewsByCategory(category);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+    }
     private void skipToNextItem(XMLEventReader eventReader) throws XMLStreamException {
         while(eventReader.hasNext()){
             XMLEvent event = eventReader.nextEvent();
@@ -93,13 +101,4 @@ public class XmlParser {
         InputStream in = url.openStream();
         return inputFactory.createXMLEventReader(in);
     }
-    public boolean isCorrectRss(Category category){
-        try {
-            getNewsByCategory(category);
-        } catch (Exception e) {
-            return false;
-        }
-        return true;
-    }
-
 }

@@ -16,15 +16,25 @@
             </li>
         </ul>
     </div>
-    <div class="collapse navbar-collapse" >
-        <ul class="navbar-nav mr-auto">
+    <c:if test="${anon}">
+    <div class="collapse navbar-collapse float-right" >
+        <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="/login">Войти</a>
+            </li>
+        </ul>
+    </div>
+    </c:if>
+    <c:if test="${!anon}">
+    <div class="collapse navbar-collapse float-right" >
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item mr-1">
+                <h3>${username}</h3>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/logout">Выйти</a>
             </li>
         </ul>
     </div>
-
+    </c:if>
 </nav>

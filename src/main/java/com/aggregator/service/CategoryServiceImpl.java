@@ -5,34 +5,38 @@ import com.aggregator.model.Category;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Сервисный класс, предназначенный для работы с категориями.
+ */
 @Service
-@Transactional
 public class CategoryServiceImpl implements CategoryService {
 
+    /**
+     * DAO - объект, предназначенный для работы с категориями.
+     */
     private final CategoryDAO categoryDAO;
 
     @Autowired
-    public CategoryServiceImpl(CategoryDAO categoryDAO) {
+    public CategoryServiceImpl(final CategoryDAO categoryDAO) {
         this.categoryDAO = categoryDAO;
     }
 
     @Override
-    public void add(Category category) {
+    public void add(final Category category) {
         categoryDAO.addCategory(category);
     }
 
     @Override
-    public void update(Category category) {
+    public void update(final Category category) {
         categoryDAO.updateCategory(category);
     }
 
     @Override
-    public Category getById(long categoryId) {
-        return categoryDAO.getCategoryById(categoryId);
+    public Category getById(final long id) {
+        return categoryDAO.getCategoryById(id);
     }
 
     @Override
@@ -41,7 +45,7 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public void delete(long id) {
+    public void delete(final long id) {
         categoryDAO.deleteCategory(id);
     }
 

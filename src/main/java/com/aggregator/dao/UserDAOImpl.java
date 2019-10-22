@@ -27,13 +27,6 @@ public class UserDAOImpl implements UserDAO {
     }
 
     @Override
-    public User getUserById(long id) {
-        try(Session session = sessionFactory.openSession()){
-            return session.get(User.class, id);
-        }
-    }
-
-    @Override
     public List<User> getAllUsers() {
         try(Session session = sessionFactory.openSession()){
             @SuppressWarnings("unchecked")
@@ -65,14 +58,18 @@ public class UserDAOImpl implements UserDAO {
         }
     }
     @Override
-    public User getUserByLogin(String login) {
-        try(Session session = sessionFactory.openSession()){
+    public User getUserByUsername(String username) {
+        try(Session session = sessionFactory.openSession()) {
             Transaction transaction = session.beginTransaction();
-            User user = (User) session.createQuery("from User where login = :login")
-                    .setParameter("login", login)
+
+            User user = (User) session.createQuery("from User where username = :username")
+                    .setParameter("username", username)
                     .getSingleResult();
+
             transaction.commit();
-             return user;
+
+            return user;
+
         } catch (Exception e){
             return null;
         }

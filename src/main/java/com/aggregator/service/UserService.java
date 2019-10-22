@@ -2,13 +2,32 @@ package com.aggregator.service;
 
 import com.aggregator.model.User;
 
-import java.util.List;
-
+/**
+ * Сервисный интерфейс для работы с пользователями.
+ */
 public interface UserService {
+    /**
+     * Метод для сохранения пользователей.
+     * @param user сохраняемый объект
+     */
     void add(User user);
-    User getById(long id);
-    List<User> all();
+
+    /**
+     * Метод для удаления пользователей.
+     * @param id идентификатор удаляемого объекта
+     */
     void delete(long id);
+
+    /**
+     * Метод для обновления пользовательских данных.
+     * @param user обновляемый объект
+     */
     void update(User user);
-    User getByLogin(String login);
+
+    /**
+     * Метод для получения пользователя по его имени.
+     * @param username имя пользователя
+     * @return уникальный объект, исходя из его имени
+     */
+    User getByUsername(String username);
 }
