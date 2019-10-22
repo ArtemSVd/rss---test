@@ -40,7 +40,7 @@
                 </c:otherwise>
             </c:choose>
         </div>
-        <div class="col">    <a href=${news.url}> ${news.title} </a> </div>
+        <div class="col">    <a href=${news.url} target="_blank"> ${news.title} </a> </div>
         <div class="col align-middle">      ${news.pubDate} </div>
     </div>
 </c:forEach>
