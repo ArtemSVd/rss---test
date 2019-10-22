@@ -40,6 +40,13 @@
         <item name="database" type="feb32156:DbDataSourceImpl" />
         <item name="DATABASE: database" type="2aa06773:H2ImplModel$Database" />
         <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
+        <item name="CATEGORY: table" type="818c1b4a:H2ImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="database" type="feb32156:DbDataSourceImpl" />
+        <item name="DATABASE: database" type="2aa06773:H2ImplModel$Database" />
+        <item name="PUBLIC: schema" type="7f85d983:H2ImplModel$Schema" />
         <item name="USERS_CATEGORY: table" type="818c1b4a:H2ImplModel$Table" />
       </path>
       <path>
@@ -55,8 +62,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -114,12 +121,7 @@
     <option name="allServicesViewState">
       <serviceView>
         <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a449cf5" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
+          <expand />
           <select />
         </treeState>
       </serviceView>
@@ -146,6 +148,7 @@
       <workItem from="1571726365389" duration="3570000" />
       <workItem from="1571733097844" duration="1402000" />
       <workItem from="1571749115165" duration="1387000" />
+      <workItem from="1571752214874" duration="3546000" />
     </task>
     <servers />
   </component>
@@ -159,11 +162,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/aggregator/Parse.java</url>
           <line>31</line>
           <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/aggregator/controller/CategoryController.java</url>
-          <line>90</line>
-          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

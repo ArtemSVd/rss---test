@@ -18,36 +18,50 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Контроллер для отображения страницы category.jsp.
+ */
 @Controller
 @SessionAttributes("selector")
 public class CategoryController {
+    /**
+     * Сервис для работы с категориями.
+     */
     private CategoryServiceImpl service;
-
-    @Autowired
-    public void setService(CategoryServiceImpl service) {
-        this.service = service;
-    }
-
+    /**
+     * Обработчик RSS - лент.
+     */
     private XmlParser parser;
+    /**
+     * Сервис для работы с пользователями.
+     */
+    private UserServiceImpl userService;
 
     @Autowired
-    public void setParser(XmlParser parser) {
+    public CategoryController(CategoryServiceImpl service, XmlParser parser, UserServiceImpl userService) {
+        this.service = service;
         this.parser = parser;
-    }
-
-   private UserServiceImpl userService;
-
-    @Autowired
-    public void setUserService(UserServiceImpl userService) {
         this.userService = userService;
     }
 
+    /**
+     * Первоначальная инициализация селектора
+     * (объект для работы с выбранными категориями).
+     * @return объект класса Selector
+     */
     @ModelAttribute("selector")
     public Selector initSelector(){
         return new Selector();
     }
 
-
+    /**
+     * Метод для получения текущего
+     * авторизованного пользователя и
+     * считывание в селектор выбранных
+     * пользователем категорий.
+     * @return возвращает представление
+     * страницы category.jsp
+     */
     @RequestMapping(value = "/currentUser", method = RequestMethod.POST)
     public ModelAndView getCurrentUser() {
         User authorizedUser = userService.getAuthorizedUser();
@@ -65,6 +79,13 @@ public class CategoryController {
         return modelAndView;
     }
 
+    /**
+     * Метод для отображения списка категорий.
+     * @param selector содержит выбранные
+     *                 пользователем категории
+     * @return возвращает представление
+     * страницы category.jsp
+     */
     @RequestMapping(value = "/category", method = RequestMethod.GET)
     public ModelAndView allCategory(@ModelAttribute("selector") Selector selector) {
         ModelAndView modelAndView = new ModelAndView();
@@ -75,17 +96,24 @@ public class CategoryController {
             modelAndView.addObject("username", userService.getAuthorizedUser().getUsername());
         }
 
-
-
         modelAndView.setViewName("category");
 
         List<Category> categories = service.all();
+
         modelAndView.addObject("categories", categories);
         modelAndView.addObject("selector", selector);
         modelAndView.addObject("category", new Category());
 
         return modelAndView;
     }
+
+    /**
+     * Метод для сохранения выбранных категорий в сессии
+     * и их сохранение для пользователя в случае, если он
+     * авторизован.
+     * @param selector содержит выбранные категории
+     * @return перенаправляет на страницу с новостями
+     */
     @RequestMapping(value = "/category", method = RequestMethod.POST)
     public ModelAndView selectCategories( @ModelAttribute("selector") final Selector selector) {
        ModelAndView modelAndView = new ModelAndView();
@@ -105,18 +133,33 @@ public class CategoryController {
        modelAndView.setViewName("redirect:news");
        return modelAndView;
     }
+
+    /**
+     * Метод для добавления новых категорий
+     * с учетом их корректности.
+     * @param category объект, полученный
+     *                 из POST - запроса
+     * @return представление category.jsp
+     */
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public  ModelAndView addCategory(
             @ModelAttribute("category") final Category category) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("redirect:category");
-        if (parser.isCorrectRss(category))
+        if (parser.isCorrectRss(category) && category.getUrl().length() != 0)
             service.add(category);
         else
             modelAndView.addObject("incorrectRss",true);
 
         return modelAndView;
     }
+
+    /**
+     * Метод для удаления категорий.
+     * @param selector содержит набор выбранных
+     *                 для удаления категорий
+     * @return представление category.jsp
+     */
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     public ModelAndView deleteCategory(
             @ModelAttribute("selector") final Selector selector) {

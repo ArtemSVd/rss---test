@@ -3,6 +3,9 @@ package com.aggregator.model;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Модель для выбранных пользователем категорий.
+ */
 public class Selector {
     private Set<Long> selectedCategories = new HashSet<>();
 

@@ -1,6 +1,7 @@
 package com.aggregator.controller;
 
 import com.aggregator.model.News;
+import com.aggregator.model.Page;
 import com.aggregator.model.Selector;
 import com.aggregator.service.NewsServiceImpl;
 import com.aggregator.service.UserServiceImpl;
@@ -20,19 +21,8 @@ import java.util.Set;
  * содержащей новостные ленты.
  */
 @Controller
-@SessionAttributes({"selector", "page" })
+@SessionAttributes(value = {"selector", "page" })
 public class NewsController {
-
-    /**
-     * Номер текущей страницы
-     * (реализовал неправильно, ибо не нашел способ сделать это по-другому).
-     */
-    private int page = 0;
-    /**
-     * Номер последней страницы.
-     */
-    private int lastPage = 0;
-
     /**
      * Сервис для работы с новостями.
      */
@@ -55,8 +45,18 @@ public class NewsController {
      * @return объект класса Selector
      */
     @ModelAttribute("selector")
-    public Selector initUser() {
+    public Selector initSelector() {
         return new Selector();
+    }
+
+    /**
+     * Первоначальная инициализация объекта
+     * для отображения страниц
+     * @return новый объект Page
+     */
+    @ModelAttribute("page")
+    public Page initPage() {
+        return new Page();
     }
 
     /**
@@ -68,7 +68,8 @@ public class NewsController {
      */
     @RequestMapping(value = {"/news", "/" }, method = RequestMethod.GET)
     public final ModelAndView allNews(
-            @ModelAttribute(name = "selector") final Selector selector) {
+            @ModelAttribute(name = "selector") final Selector selector,
+            @ModelAttribute(name = "page") Page page) {
 
         ModelAndView modelAndView = new ModelAndView();
 
@@ -82,17 +83,20 @@ public class NewsController {
         modelAndView.setViewName("news");
 
         List<News> newsList;
-
+        int lastPage;
         Set<Long> selectedCategories = selector.getSelectedCategories();
         if (selectedCategories.size() != 0) {
             newsList = newsService.
-                    getSortedNewsBySelectedCategories(selectedCategories, page);
+                    getSortedNewsBySelectedCategories(selectedCategories, page.getNumPage());
             lastPage = newsService.lastPaginatedNews(selectedCategories);
         } else {
-            newsList = newsService.getSortedNewsByAllCategories(page);
+            newsList = newsService.getSortedNewsByAllCategories(page.getNumPage());
             lastPage = newsService.lastPaginatedNews(null);
         }
 
+        page.setLastPage(lastPage);
+
+        modelAndView.addObject("page", page);
         modelAndView.addObject("newsList", newsList);
         return modelAndView;
     }
@@ -102,10 +106,10 @@ public class NewsController {
      * @return модель и представление ведет на category.jsp
      */
     @RequestMapping(value = "/reset", method = RequestMethod.GET)
-    public final ModelAndView resetPageCount() {
-        page = 0;
-
+    public final ModelAndView resetPageCount(@ModelAttribute("page") Page page) {
         ModelAndView modelAndView = new ModelAndView();
+
+        modelAndView.addObject("page", new Page());
 
         modelAndView.setViewName("redirect:category");
 
@@ -117,13 +121,15 @@ public class NewsController {
      * @return модель и представление возвращает на news.jsp
      */
     @RequestMapping(value = "/next", method = RequestMethod.GET)
-    public final ModelAndView nextPage() {
+    public final ModelAndView nextPage(@ModelAttribute("page") Page page) {
 
-        if (page + 1 < lastPage) {
-            page++;
+        if (page.getNumPage() + 1 < page.getLastPage()) {
+            page.setNumPage(page.getNumPage() + 1);
         }
 
         ModelAndView modelAndView = new ModelAndView();
+
+        modelAndView.addObject("page", page);
 
         modelAndView.setViewName("redirect:news");
 
@@ -135,13 +141,15 @@ public class NewsController {
      * @return модель и представление возвращает на news.jsp
      */
     @RequestMapping(value = "/prev", method = RequestMethod.GET)
-    public final ModelAndView prevPage() {
+    public final ModelAndView prevPage(@ModelAttribute("page") Page page) {
 
-        if (page - 1 >= 0) {
-            page--;
+        if (page.getNumPage() - 1 >= 0) {
+            page.setNumPage(page.getNumPage() - 1);
         }
 
         ModelAndView modelAndView = new ModelAndView();
+
+        modelAndView.addObject("page", page);
 
         modelAndView.setViewName("redirect:news");
 
