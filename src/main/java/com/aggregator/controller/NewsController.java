@@ -88,10 +88,12 @@ public class NewsController {
         if (selectedCategories.size() != 0) {
             newsList = newsService.
                     getSortedNewsBySelectedCategories(selectedCategories, page.getNumPage());
-            lastPage = newsService.lastPaginatedNews(selectedCategories);
+            lastPage = page.getLastPage() != 0 ?
+                    page.getLastPage() : newsService.lastPaginatedNews(selectedCategories);
         } else {
             newsList = newsService.getSortedNewsByAllCategories(page.getNumPage());
-            lastPage = newsService.lastPaginatedNews(null);
+            lastPage = page.getLastPage() != 0 ?
+                    page.getLastPage() : newsService.lastPaginatedNews(null);
         }
 
         page.setLastPage(lastPage);
