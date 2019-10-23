@@ -9,10 +9,14 @@ import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+/**
+ * Класс для первоначальной загрузки лент с яндекса.
+ */
 public class HtmlParser {
     private final String RSS_SOURCE = "https://yandex.ru/news/export";
     private final String HREF_ATTR = "href";
     private final String TAG_ANCHOR = "a";
+
     private Elements htmlParse() {
         Elements elements = new Elements();
         try {

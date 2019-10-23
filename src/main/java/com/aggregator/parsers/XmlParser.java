@@ -19,6 +19,9 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Класс для обработки RSS - лент.
+ */
 @Component
 public class XmlParser {
     private final String TITLE = "title";
@@ -28,6 +31,17 @@ public class XmlParser {
     private final String ENCL_SOURCE = "enclosure";
     private final QName ATTRIBUTE_URL = new QName("url");
 
+    /**
+     * Метод для получения новостей из RSS - источников.
+     * @param category категория, по которой необходимо получить новости
+     * @return список новых новостей
+     * (те, которые уже загружены, заново не выдаются)
+     * @throws IOException ошибки ввода/вывода
+     * @throws XMLStreamException ошибки при создании потока
+     * чтения xml - файлов
+     * @throws ParseException ошибки при
+     * обработке xml - файла
+     */
     public Set<News> getNewsByCategory(Category category) throws IOException, XMLStreamException, ParseException {
         Set<News> set = new HashSet<>();
 
@@ -36,13 +50,21 @@ public class XmlParser {
         XMLEventReader eventReader = getEventReader(category);
 
         News news = new News();
+
+        // Доходим до первого тега item
         skipToNextItem(eventReader);
-        while(eventReader.hasNext()){
+
+        while(eventReader.hasNext()) {
 
             news.setCategory(category);
+
             XMLEvent event = eventReader.nextEvent();
-            if(event.isStartElement()){
+
+            //Если видим открывающий тег, проверяем вложенные в него теги
+            if(event.isStartElement()) {
+
                 String localPart = event.asStartElement().getName().getLocalPart();
+
                 switch (localPart){
                     case TITLE:
                         news.setTitle(eventReader.getElementText());
@@ -55,8 +77,7 @@ public class XmlParser {
                         Date newsDate = TimeUtil.parseDate(pubDate);
                         if(newsDate.after(lastUpdate)) {
                             news.setDateFromXml(pubDate);
-                        }
-                        else{
+                        } else {
                             skipToNextItem(eventReader);
                             news = new News();
                         }
@@ -67,6 +88,8 @@ public class XmlParser {
                         break;
                 }
             }
+            //Если получили закрывающий тег для item сохраняем новость и
+            // создаем новую
             if(event.isEndElement()){
                 String localPart = event.asEndElement().getName().getLocalPart();
                 if(ITEM.equals(localPart)){
@@ -77,6 +100,15 @@ public class XmlParser {
         }
         return set;
     }
+
+    /**
+     * Метод проверят на корректность
+     * ссылки на rss - ленты.
+     * @param category проовреяемая категория,
+     *                 содержит ссылку на rss - ленту
+     * @return возвращает true - если ссылка корректна
+     * и по ней можно загрузить новости
+     */
     public boolean isCorrectRss(Category category){
         try {
             getNewsByCategory(category);
@@ -85,6 +117,7 @@ public class XmlParser {
         }
         return true;
     }
+
     private void skipToNextItem(XMLEventReader eventReader) throws XMLStreamException {
         while(eventReader.hasNext()){
             XMLEvent event = eventReader.nextEvent();
@@ -95,6 +128,7 @@ public class XmlParser {
             }
         }
     }
+
     private XMLEventReader getEventReader(Category category) throws IOException, XMLStreamException {
         URL url = new URL(category.getUrl());
         XMLInputFactory inputFactory = XMLInputFactory.newInstance();
