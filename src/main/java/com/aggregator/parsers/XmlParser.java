@@ -25,7 +25,8 @@ import java.util.Set;
 @Component
 public class XmlParser {
     private final String TITLE = "title";
-    private final String LINK = "guid";
+    private final String LINK = "link";
+    private final String CONST_LINK = "guid";
     private final String PUB_DATE = "pubDate";
     private final String ITEM = "item";
     private final String ENCL_SOURCE = "enclosure";
@@ -69,8 +70,13 @@ public class XmlParser {
                     case TITLE:
                         news.setTitle(eventReader.getElementText());
                         break;
-                    case LINK:
+                    case CONST_LINK:
                         news.setUrl(eventReader.getElementText());
+                        break;
+                    case LINK :
+                        if(news.getUrl() == null) {
+                            news.setUrl(eventReader.getElementText());
+                        }
                         break;
                     case PUB_DATE:
                         String pubDate = eventReader.getElementText();
